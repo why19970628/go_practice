@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message InfoRequest{
+    string username = 1;
+}
+
+
+message InfoResponse{
+    string msg = 2;
+}
+
+// 接口
+service Hello{
+    rpc Info(InfoRequest) returns (InfoResponse){}
+}
