@@ -21,10 +21,9 @@ func JsonToMap() {
 	fmt.Println(mapResult)
 }
 
-
 type Person struct {
 	Name string
-	Age int
+	Age  int
 }
 
 func MapToStruct() {
@@ -38,10 +37,10 @@ func MapToStruct() {
 	if err := mapstructure.Decode(mapInstance, &person); err != nil {
 		fmt.Println(err)
 	}
-	fmt.Printf("map2struct后得到的 struct 内容为:%v", person)
+	fmt.Printf("map2struct后得到的 struct_addr 内容为:%v", person)
 }
 
-func main(){
+func main() {
 	//JsonToMap()
 	MapToStruct()
 }
