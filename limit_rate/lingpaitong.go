@@ -8,7 +8,7 @@ import (
 )
 
 // https://github.com/juju/ratelimit
-func RateLimitMiddleware(fillInterval time.Duration, cap int64) func(c *gin.Context) {
+func RateLimitMiddleware_(fillInterval time.Duration, cap int64) func(c *gin.Context) {
 	bucket := ratelimit.NewBucket(fillInterval, cap)
 	return func(c *gin.Context) {
 		// 如果取不到令牌就返回响应
