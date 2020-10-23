@@ -3,18 +3,16 @@ package main
 import (
 	"fmt"
 	"time"
-	"go.uber.org/ratelimit"
 
+	"go.uber.org/ratelimit"
 )
 
-
 func main() {
-	rl := ratelimit.New(100) // per second
+	rl := ratelimit.New(1000) // per second
 
 	prev := time.Now()
-	fmt.Println(prev)
-	for i := 0; i < 1000; i++ {
-		now := rl.Take() // Take() 方法会返回漏桶下一次滴水的时间
+	for i := 0; i < 10; i++ {
+		now := rl.Take()
 		fmt.Println(i, now.Sub(prev))
 		prev = now
 	}
