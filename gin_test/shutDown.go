@@ -1,7 +1,11 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"gopkg.in/ffmt.v1"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -10,11 +14,32 @@ import (
 	"time"
 )
 
+type SmsLoginParam struct {
+	Phone string `json:"phone"`
+	Code  string `json:"code"`
+}
+
+func Decode(io io.ReadCloser, v interface{}) error {
+	return json.NewDecoder(io).Decode(v)
+}
+
+
 func main() {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
 		time.Sleep(5 * time.Second)
 		c.String(http.StatusOK, "Welcome Gin Server")
+	})
+
+	router.POST("/hello", func(c *gin.Context) {
+		var smsLoginParam SmsLoginParam
+		//context.Request.Body 包含请求参数
+		err := Decode(c.Request.Body, &smsLoginParam)
+		if err != nil {
+			fmt.Printf("参数解析失败~~,原因是%v\n", err.Error())
+			return
+		}
+		ffmt.Puts(smsLoginParam)
 	})
 
 
