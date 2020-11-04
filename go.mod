@@ -3,6 +3,9 @@ module pingguoxueyuan
 go 1.15
 
 require (
+	github.com/aliyun/aliyun-oss-go-sdk v2.1.4+incompatible // indirect
+	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
+	github.com/disintegration/imaging v1.6.2
 	github.com/gin-gonic/gin v1.6.3
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/protobuf v1.4.2 // indirect

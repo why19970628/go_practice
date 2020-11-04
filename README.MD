@@ -7,3 +7,7 @@ some go example test
 - go mod init project_name
 - go mod tidy
 
+## docker build
+`docker build . -t goweb_app`
+
+`docker run -p 3000:3000 goweb_app`

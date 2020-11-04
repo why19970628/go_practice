@@ -41,8 +41,11 @@ func main() {
 
 
 func setData (res *Result) {
+	fmt.Println("setData" ,res)
 	res.Code    = 500
 	res.Message = "fail"
+	fmt.Println("setData" ,res)
+
 }
 
 func toJson (res *Result) {

@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"runtime"
 	"syscall"
 	"time"
 )
@@ -17,6 +18,8 @@ import (
 type SmsLoginParam struct {
 	Phone string `json:"phone"`
 	Code  string `json:"code"`
+	Name  string `json:"name"`
+
 }
 
 func Decode(io io.ReadCloser, v interface{}) error {
@@ -31,6 +34,19 @@ func main() {
 		c.String(http.StatusOK, "Welcome Gin Server")
 	})
 
+	maxProces := runtime.NumCPU()
+	if maxProces > 1 {
+		maxProces -= 1
+	}
+	// Go 1.5 版本之前，默认使用的是单核心执行。从 Go 1.5 版本开始，默认执行上面语句以便让代码并发执行，最大效率地利用 CPU。
+	//GOMAXPROCS 同时也是一个环境变量，在应用程序启动前设置环境变量也可以起到相同的作用。
+	//此处还要注意点一点就是： Go默认执行使用的CPU核心数为系统CPU最大核心。
+
+	// 多核比较适合那种 CPU 密集型程序，如果是 IO 密集型使用多核会增加 CPU 切换的成本。
+
+	runtime.GOMAXPROCS(maxProces)
+
+
 	router.POST("/hello", func(c *gin.Context) {
 		var smsLoginParam SmsLoginParam
 		//context.Request.Body 包含请求参数
@@ -39,8 +55,19 @@ func main() {
 			fmt.Printf("参数解析失败~~,原因是%v\n", err.Error())
 			return
 		}
+		smsLoginParam.Name = "WANG"
 		ffmt.Puts(smsLoginParam)
+
+		bt, err := json.Marshal(smsLoginParam)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(string(bt))
 	})
+
+	//mp := make(map[string]interface{})
+
+
 
 
 

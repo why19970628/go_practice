@@ -32,3 +32,5 @@ build/
 
 .idea/
 *.xml
+qimi
+/qimi/oss/ossclinet.go
