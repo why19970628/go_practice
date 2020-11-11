@@ -7,9 +7,11 @@ require (
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
 	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/gin-gonic/gin v1.6.3
+	github.com/go-redsync/redsync v1.4.2
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/protobuf v1.4.2 // indirect
+	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/jasonlvhit/gocron v0.0.1
 	github.com/jinzhu/gorm v1.9.16
 	github.com/json-iterator/go v1.1.10 // indirect
