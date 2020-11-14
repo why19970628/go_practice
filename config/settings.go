@@ -29,6 +29,11 @@ var (
 	OssEndPoint        string
 	OssFolderPrefix    string
 	OssUrlPrefixPublic string
+
+	OTS_TEST_ENDPOINT		string
+	OTS_TEST_INSTANCENAME 	string
+	OTS_TEST_KEYID			string
+	OTS_TEST_SECRET			string
 )
 
 func init() {
@@ -40,6 +45,7 @@ func init() {
 	LoadDb(base_config)
 	//LoadQiniu(base_config)
 	//LoadOss(base_config)
+	LoadTableStore(base_config)
 
 }
 
@@ -72,4 +78,11 @@ func LoadOss(file *ini.File) {
 	OssEndPoint = file.Section("oss").Key("EndPoint").String()
 	OssFolderPrefix = file.Section("oss").Key("FolderPrefix").String()
 	OssUrlPrefixPublic = file.Section("oss").Key("UrlPrefixPublic").String()
+}
+
+func LoadTableStore(file *ini.File) {
+	OTS_TEST_ENDPOINT = file.Section("tablestore").Key("OTS_TEST_ENDPOINT").String()
+	OTS_TEST_INSTANCENAME = file.Section("tablestore").Key("OTS_TEST_INSTANCENAME").String()
+	OTS_TEST_KEYID = file.Section("tablestore").Key("OTS_TEST_KEYID").String()
+	OTS_TEST_SECRET = file.Section("tablestore").Key("OTS_TEST_SECRET").String()
 }
