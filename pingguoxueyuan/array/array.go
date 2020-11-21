@@ -36,11 +36,20 @@ func testArray4()  {
 	fmt.Println(a)
 }
 
+func array_pop()  {
+	array := []int{1,2,3,4}
+	fmt.Println(array)
+	//删除第i个元素
+	i := 2
+	array = append(array[:i], array[i+1:]...)
+fmt.Println(array)
+}
 
 func main()  {
 	testArray1()
 	testArray2()
 	testArray3()
 	testArray4()
+	array_pop()
 
 }

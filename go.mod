@@ -7,7 +7,6 @@ require (
 	github.com/aliyun/aliyun-tablestore-go-sdk v1.5.0
 	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/duolatech/xhttp v0.0.0-20190704060942-3c15ba829e17
 	github.com/gin-gonic/gin v1.6.3
@@ -30,6 +29,7 @@ require (
 	github.com/spf13/cobra v1.1.1
 	github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041
 	github.com/xeipuuv/gojsonschema v1.2.0
+	github.com/zsais/go-gin-prometheus v0.1.0
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/sys v0.0.0-20201022201747-fb209a7c41cd
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect

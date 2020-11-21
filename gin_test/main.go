@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	ginprometheus "github.com/zsais/go-gin-prometheus"
 	"gopkg.in/ffmt.v1"
 	"io"
 	"log"
@@ -12,7 +13,6 @@ import (
 	"os/signal"
 	"runtime"
 	"syscall"
-	"time"
 )
 
 type SmsLoginParam struct {
@@ -29,8 +29,9 @@ func Decode(io io.ReadCloser, v interface{}) error {
 
 func main() {
 	router := gin.Default()
+	p := ginprometheus.NewPrometheus("gin")
+	p.Use(router)
 	router.GET("/", func(c *gin.Context) {
-		time.Sleep(5 * time.Second)
 		c.String(http.StatusOK, "Welcome Gin Server")
 	})
 
@@ -45,6 +46,7 @@ func main() {
 	// 多核比较适合那种 CPU 密集型程序，如果是 IO 密集型使用多核会增加 CPU 切换的成本。
 
 	runtime.GOMAXPROCS(maxProces)
+
 
 
 	router.POST("/hello", func(c *gin.Context) {
@@ -64,11 +66,6 @@ func main() {
 		}
 		fmt.Println(string(bt))
 	})
-
-	//mp := make(map[string]interface{})
-
-
-
 
 
 	srv := &http.Server{
