@@ -1,4 +1,4 @@
-package main
+package redis
 
 import (
 	"fmt"
@@ -49,7 +49,7 @@ func incr() {
 	}
 }
 
-func main() {
+func main3() {
 	//var wg sync.WaitGroup
 	//for i := 0; i < 10; i++ {
 	//	wg.Add(1)
@@ -60,7 +60,8 @@ func main() {
 	//}
 	//wg.Wait()
 	for i := 0; i < 10; i++ {
-			incr()
-		}
+		incr()
 	}
+}
+
 //}

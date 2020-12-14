@@ -1,4 +1,4 @@
-package main
+package redis
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func main2() {
 	curtime := time.Now().UnixNano()
 
 	//单个测试

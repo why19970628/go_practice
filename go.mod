@@ -11,11 +11,11 @@ require (
 	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/duolatech/xhttp v0.0.0-20190704060942-3c15ba829e17
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-redis/redis v6.15.5+incompatible
+	github.com/go-redis/redis v6.15.7+incompatible
 	github.com/go-redsync/redsync v1.4.2
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
-	github.com/golang/protobuf v1.4.2
+	github.com/golang/protobuf v1.4.3
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/haisum/rpcexample v0.0.0-20151013205443-7d034ca95162
 	github.com/jasonlvhit/gocron v0.0.1
@@ -30,10 +30,13 @@ require (
 	github.com/robfig/cron v1.2.0
 	github.com/spf13/cobra v1.1.1
 	github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041
+	github.com/tal-tech/go-zero v1.0.28
 	github.com/xeipuuv/gojsonschema v1.2.0
 	github.com/zsais/go-gin-prometheus v0.1.0
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/sys v0.0.0-20201022201747-fb209a7c41cd
+	google.golang.org/grpc v1.29.1
+	google.golang.org/protobuf v1.25.0
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/ffmt.v1 v1.5.6
 	gopkg.in/ini.v1 v1.51.0
