@@ -55,3 +55,47 @@ const SetStringKeyWithExpire = `
 		return 2;
 	end
 `
+
+
+// 加锁的脚本
+const LockLua = `
+   	-- KEYS[1]: key
+    -- ARGV[1]: expire time
+	-- return:  设置锁和过期时间成功，返回 1 。 设置失败，返回 0 。
+	if redis.call('SETNX', KEYS[1], ARGV[1]) == 1 or redis.call('TTL', KEYS[1]) < 0 then
+		redis.call('PEXPIRE', KEYS[1], ARGV[2])
+		return 1
+	else
+		return 0
+	end
+`
+
+
+// 释放锁的脚本
+const ReleaseLua = `
+   	-- KEYS[1]: key
+    -- ARGV[1]: random value 防止锁过期而错删
+	-- return:  删除成功，返回 1 。 设置失败，返回 0 。
+	if redis.call("get", KEYS[1]) == ARGV[1] then
+		return redis.call("del", KEYS[1])
+	else
+		return 0
+	end
+`
+
+
+// 秒杀的脚本
+const SkillLua = `
+   	-- KEYS[1]: lock key
+   	-- KEYS[2]: good key
+    -- ARGV[1]: random value
+    -- ARGV[2]: PEXPIRE time
+	-- return:  设置锁和过期时间成功，返回 1 。 设置失败，返回 0 。
+	if redis.call('SETNX', KEYS[1], ARGV[1]) == 1 or redis.call('TTL', KEYS[1]) < 0 then
+		redis.call("decr", KEYS[2])
+		redis.call('PEXPIRE', KEYS[1], ARGV[2])
+		return 1
+	else
+		return 0
+	end
+`
