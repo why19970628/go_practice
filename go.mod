@@ -17,6 +17,7 @@ require (
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/protobuf v1.4.3
 	github.com/gomodule/redigo v2.0.0+incompatible
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.0.1 // indirect
 	github.com/haisum/rpcexample v0.0.0-20151013205443-7d034ca95162
 	github.com/jasonlvhit/gocron v0.0.1
 	github.com/jinzhu/gorm v1.9.16
@@ -36,7 +37,9 @@ require (
 	github.com/zsais/go-gin-prometheus v0.1.0
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/sys v0.0.0-20201022201747-fb209a7c41cd
-	google.golang.org/grpc v1.29.1
+	google.golang.org/grpc v1.34.0
+	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.0.1 // indirect
+	google.golang.org/grpc/examples v0.0.0-20201222210138-66c1393796be // indirect
 	google.golang.org/protobuf v1.25.0
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/ffmt.v1 v1.5.6

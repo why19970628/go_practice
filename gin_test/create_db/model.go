@@ -169,3 +169,23 @@ type SdCronJob struct {
 	ServerIp   string `json:"server_ip"`
 	OptionUser string `json:"option_user"`
 }
+
+
+type SlotList struct {
+	Uid        string `json:"uid"`
+	Url        string `json:"url"`
+	JobId      string `json:"job_id"`
+	JobName    string `json:"job_name"`
+	GroupId    string `json:"group_id"`
+	GroupName  string `json:"group_name"`
+	Status     string `json:"status"`
+	ResultMsg  string `json:"result_msg"`
+	StartTime  string `json:"start_time"`
+	EndTime    string `json:"end_time"`
+	ServerIp   string `json:"server_ip"`
+	OptionUser string `json:"option_user"`
+}
+
+
+
+
