@@ -8,6 +8,7 @@ require (
 	github.com/aliyun/aliyun-tablestore-go-sdk v1.5.0
 	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
+	github.com/coreos/etcd v3.3.13+incompatible
 	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/duolatech/xhttp v0.0.0-20190704060942-3c15ba829e17
 	github.com/gin-gonic/gin v1.6.3
@@ -35,9 +36,10 @@ require (
 	github.com/tal-tech/go-zero v1.0.28
 	github.com/xeipuuv/gojsonschema v1.2.0
 	github.com/zsais/go-gin-prometheus v0.1.0
+	go.etcd.io/etcd v0.0.0-20200402134248-51bdeb39e698
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/sys v0.0.0-20201022201747-fb209a7c41cd
-	google.golang.org/grpc v1.34.0
+	google.golang.org/grpc v1.33.1
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.0.1 // indirect
 	google.golang.org/grpc/examples v0.0.0-20201222210138-66c1393796be // indirect
 	google.golang.org/protobuf v1.25.0
