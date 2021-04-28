@@ -13,5 +13,6 @@ func main() {
 
 	//valueStrings := make([]string, 0, len(orders))
 
+	fmt.Println(fmt.Sprintf("{\"product\":\"%s\"}", "333"))
 
 }

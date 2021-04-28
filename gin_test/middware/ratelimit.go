@@ -1,4 +1,4 @@
-package main
+package middware
 
 import (
 	"net/http"
@@ -49,12 +49,12 @@ func rateLimit2(fillInterval time.Duration, cap int64) func(ctx *gin.Context) {
 	}
 }
 
-func main() {
-	r := gin.Default()
-
-	r.GET("/ping", rateLimit1(), pingHandler)
-
-	r.GET("/hei", rateLimit2(2*time.Second, 1), heiHandler)
-
-	r.Run()
-}
+//func main() {
+//	r := gin.Default()
+//
+//	r.GET("/ping", rateLimit1(), pingHandler)
+//
+//	r.GET("/hei", rateLimit2(2*time.Second, 1), heiHandler)
+//
+//	r.Run()
+//}

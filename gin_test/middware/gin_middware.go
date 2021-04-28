@@ -1,4 +1,4 @@
-package main
+package middware
 
 import (
 	"github.com/gin-gonic/gin"
@@ -24,7 +24,6 @@ func RateLimitMiddleware(fillInterval time.Duration, cap int64) func(c *gin.Cont
 		c.Next()
 	}
 }
-
 
 func main() {
 	r := gin.New()
