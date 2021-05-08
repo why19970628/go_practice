@@ -1,16 +1,16 @@
 package main
 
 type User struct {
-	Id int
-	Sex int
+	Id   int
+	Sex  int
 	Name string
 }
 
-func SerId(u *User)  {
+func SerId(u *User) {
 	u.Id = 123
 }
 
-func NewUser(f func(u *User))  *User {
+func NewUser(f func(u *User)) *User {
 	u := new(User)
 	f(u)
 	return u
@@ -23,4 +23,3 @@ func WithUserId(id int) func(u *User) {
 		u.Sex = 1
 	}
 }
-

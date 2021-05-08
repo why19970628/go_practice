@@ -1,11 +1,11 @@
 package main
 
 import (
-"fmt"
-"os"
-"os/signal"
-"syscall"
-"time"
+	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
 )
 
 func listenSignal() {

@@ -8,8 +8,7 @@ import (
 	"time"
 )
 
-
-func  GetRandomString(l int) string {
+func GetRandomString(l int) string {
 	str := "0123456789abcdefghijklmnopqrstuvwxyz"
 	bytes := []byte(str)
 
@@ -22,12 +21,12 @@ func  GetRandomString(l int) string {
 	return string(result)
 }
 
-func main()  {
+func main() {
 	ips := "10.22.11.231"
 	ipSlice := strings.Split(ips, ".")
 	fmt.Println(GetRandomString(5))
 
-	for index, value := range ipSlice{
-		fmt.Printf("ip index = %d, value = %s\n",index, value)
+	for index, value := range ipSlice {
+		fmt.Printf("ip index = %d, value = %s\n", index, value)
 	}
 }

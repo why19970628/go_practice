@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	key := "info_1"
 	params := []interface{}{key}
 	params = append(params, "777", "test")
