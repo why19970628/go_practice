@@ -5,6 +5,7 @@ import (
 	"github.com/juju/ratelimit"
 	"net/http"
 	"time"
+	ginprometheus "github.com/zsais/go-gin-prometheus"
 )
 
 // docs: https://www.liwenzhou.com/posts/Go/ratelimit/
@@ -28,6 +29,9 @@ func RateLimitMiddleware(fillInterval time.Duration, cap int64) func(c *gin.Cont
 func main() {
 	r := gin.New()
 	fillInterval := 2 * time.Second
+	//prometheus 监控
+	p := ginprometheus.NewPrometheus("go_practice")
+	p.Use(r)
 	r.GET("/", RateLimitMiddleware(fillInterval, 5), func(c *gin.Context) {
 		c.String(http.StatusOK, "this is main")
 	})
