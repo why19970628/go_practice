@@ -53,6 +53,28 @@ func TwoSum4(arr []int, target int) []int {
 	return ret
 }
 
+func solution1(array []int, target int) {
+	for i := 0; i < len(array)-1; i++ {
+		b := i + 1
+		for j := b; j < len(array)-1; j++ {
+			if array[i]+array[j] == target {
+				fmt.Println(i, j)
+			}
+		}
+	}
+}
+
+func solution2(array []int, target int) {
+	map1 := make(map[int]int, len(array))
+	for i, v := range array {
+		if index2, ok := map1[target-v]; ok {
+			fmt.Println(index2, i)
+		} else {
+			map1[v] = i
+		}
+	}
+}
+
 func main() {
 	m := []int{1, 2, 3, 4}
 	res := TwoSum4(m, 7)
