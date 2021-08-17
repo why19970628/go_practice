@@ -10,15 +10,16 @@ import (
 	"os/signal"
 	"sync"
 	"syscall"
+	"time"
 )
 
 func main() {
 	hystrix.ConfigureCommand("default", hystrix.CommandConfig{
-		Timeout:                3000, // 单次请求 超时时间
-		MaxConcurrentRequests:  1000, // 最大并发量
-		SleepWindow:            5000, // 熔断后多久去尝试服务是否可用
-		RequestVolumeThreshold: 1,    // 验证熔断的 请求数量, 10秒内采样
-		ErrorPercentThreshold:  1,    // 验证熔断的 错误百分比
+		Timeout:                int(time.Second * 2), // 单次请求 超时时间
+		MaxConcurrentRequests:  5,                    // 最大并发量
+		SleepWindow:            5000,                 // 熔断后多久去尝试服务是否可用
+		RequestVolumeThreshold: 1,                    // 验证熔断的 请求数量, 10秒内采样
+		ErrorPercentThreshold:  1,                    // 验证熔断的 错误百分比
 	})
 
 	//开启一个http监控服务
@@ -32,9 +33,10 @@ func main() {
 	}()
 
 	wg := sync.WaitGroup{}
-	wg.Add(100)
-	for i := 0; i < 100; i++ {
-		go Do(i, &wg)
+	wg.Add(10)
+	for i := 0; i < 10; i++ {
+		//go Do(i, &wg)
+		go Go(i, &wg)
 	}
 	wg.Wait()
 
@@ -46,7 +48,7 @@ func main() {
 func Do(params int, wg *sync.WaitGroup) {
 	err := hystrix.Do("defalut", func() error {
 		fmt.Println(params)
-		//time.Sleep(1 * time.Second)
+		time.Sleep(2 * time.Second)
 		//log.Println("sleep 2 second")
 		return nil
 	}, nil)
@@ -66,4 +68,22 @@ func Do(params int, wg *sync.WaitGroup) {
 
 	}
 	wg.Done()
+}
+
+func Go(params int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	hystrix.Go("get_baidu", func() error {
+		// talk to other services
+		_, err := http.Get("https://www.baidu.com/")
+		//fmt.Println(params)
+		time.Sleep(time.Second)
+		if err != nil {
+			fmt.Println("get error")
+			return err
+		}
+		return nil
+	}, func(err error) error {
+		fmt.Println("get an error, handle it, err := ", err.Error())
+		return nil
+	})
 }

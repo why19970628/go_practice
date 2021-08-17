@@ -33,12 +33,14 @@ require (
 	github.com/juju/ratelimit v1.0.1
 	github.com/liunian1004/dingtalk v0.0.0-20181101073314-54ebfb4e7670
 	github.com/mitchellh/mapstructure v1.3.3
+	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/olivere/elastic v6.2.35+incompatible
 	github.com/olivere/elastic/v7 v7.0.21
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/robfig/cron v1.2.0
 	github.com/satori/go.uuid v1.2.0
+	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v1.1.1
 	github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041
 	github.com/tal-tech/go-zero v1.0.28
@@ -51,6 +53,7 @@ require (
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
 	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015
+	golang.org/x/tools v0.0.0-20200825202427-b303f430e36d
 	google.golang.org/grpc v1.33.1
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.0.1 // indirect
 	google.golang.org/grpc/examples v0.0.0-20201222210138-66c1393796be // indirect

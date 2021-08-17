@@ -1,4 +1,4 @@
-package settings
+package main
 
 import (
 	"fmt"
@@ -30,10 +30,10 @@ var (
 	OssFolderPrefix    string
 	OssUrlPrefixPublic string
 
-	OTS_TEST_ENDPOINT		string
-	OTS_TEST_INSTANCENAME 	string
-	OTS_TEST_KEYID			string
-	OTS_TEST_SECRET			string
+	OTS_TEST_ENDPOINT     string
+	OTS_TEST_INSTANCENAME string
+	OTS_TEST_KEYID        string
+	OTS_TEST_SECRET       string
 )
 
 func init() {

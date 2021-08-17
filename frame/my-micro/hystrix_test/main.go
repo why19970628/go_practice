@@ -35,7 +35,7 @@ func TestHystix(i int, wg *sync.WaitGroup) {
 			fmt.Println("get error")
 			return err
 		}
-		time.Sleep(time.Second * 2) // 请模拟求超时
+		//time.Sleep(time.Second * 2) // 请模拟求超时
 		fmt.Println("请求成功：", i, res.Status)
 		return nil
 	},
