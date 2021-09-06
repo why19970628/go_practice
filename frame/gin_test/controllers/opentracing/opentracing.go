@@ -2,6 +2,7 @@ package opentracing
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 
@@ -37,4 +38,20 @@ func Panic(c *gin.Context) {
 		"data":   make(map[string]interface{}),
 	})
 	c.Done()
+}
+
+func Long(c *gin.Context) {
+	time.Sleep(time.Second * 3)
+	c.JSON(http.StatusOK, gin.H{
+		"errno":  0,
+		"errmsg": "success",
+		"data":   make(map[string]interface{}),
+	})
+	c.Done()
+}
+
+func EmptySuccessResponse(c *gin.Context) {
+	time.Sleep(200 * time.Microsecond)
+	c.String(http.StatusOK, "sucess")
+	return
 }

@@ -1,101 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:interview questions">
-      <change afterPath="$PROJECT_DIR$/lib/mq/rocketmq/trans_consumer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mq/rocketmq/trans_producer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/.air.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/.air.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/.air.conf2" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/.air.conf2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/controllers/opentracing/opentracing.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/controllers/opentracing/opentracing.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/create_db/OrmEngine.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/create_db/OrmEngine.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/create_db/create_db.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/create_db/create_db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/create_db/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/create_db/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/libraries/http/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/libraries/http/http.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/middware/gin_middware.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/middware/gin_middware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/middware/ratelimit.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/middware/ratelimit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/middware/trace.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/middware/trace.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin_test/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/router/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hongbao/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/hongbao/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-micro/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/my-micro/hello.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-micro/hystrix_test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/my-micro/hystrix_test/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-micro/hystrix_test/main2.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/my-micro/hystrix_test/main2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-micro/proto/hello.proto" beforeDir="false" afterPath="$PROJECT_DIR$/frame/my-micro/proto/hello.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-micro/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/my-micro/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qianfeng/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qianfeng/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qianfeng/demo16_newtimer.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qianfeng/demo16_newtimer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qianfeng/demo27_select.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qianfeng/demo27_select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qianfeng/demo28_select.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qianfeng/demo28_select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/array/constant.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/array/constant.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/array/sum.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/array/sum.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/cpu/cpuNum.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/cpu/cpuNum.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/etcd/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/etcd/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/etcd/etcd2.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/etcd/etcd2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/etcd/etcd_lock.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/etcd/etcd_lock.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/goto/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/goto/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/ip.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/ip.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/loadbalancer/avg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/loadbalancer/avg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/loadbalancer/random.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/loadbalancer/random.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/loadbalancer/random2.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/loadbalancer/random2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/oss/oss_image_size.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/oss/oss_image_size.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/oss/ossclinet.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/oss/ossclinet.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/lua/err.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/lua/err.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/lua/lua1.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/lua/lua1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/lua/luaScript.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/lua/luaScript.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/redis.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/test..go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/test..go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/redis/test2.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/redis/test2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qimi/sync.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/qimi/sync.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/demo/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/demo/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/demo/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/demo/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/grpc/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/grpc/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/grpc/protos/hello.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/grpc/protos/hello.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/grpc/protos/hello.proto" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/grpc/protos/hello.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/hello.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/hello.proto" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/hello.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/hello/hello.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/hello/hello.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/helloclient/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/helloclient/hello.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/internal/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/internal/logic/pinglogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/internal/logic/pinglogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/internal/server/helloserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/internal/server/helloserver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/hello/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/rpc/hello/internal/svc/servicecontext.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/common.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/dingding/dingding.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/dingding/dingding.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/dingding/dingding_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/dingding/dingding_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/dingding/robot.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/dingding/robot.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/for.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/for.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/httpGet.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/httpGet.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/rune.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/rune.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/GlobalTableOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/GlobalTableOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/LocalIndexTableOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/LocalIndexTableOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/LocalTransactionOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/LocalTransactionOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/MultipleRowOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/MultipleRowOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/SearchIndexOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/SearchIndexOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/SingleRowOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/SingleRowOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/StreamOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/StreamOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/tablestore/sample/TableOperation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/tablestore/sample/TableOperation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandan/zip.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/sandan/zip.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/build-errors.log" beforeDir="false" />
-    </list>
-    <list id="2fa7f889-c44d-4270-903b-635f0e575484" name="add:interview questions" comment="">
-      <change afterPath="$PROJECT_DIR$/interview_questions/loadbalance.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview_questions/reverse.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview_questions/search.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pingguoxueyuan/map/SyncMap.go" afterDir="false" />
+    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:nacos settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frame/gin_test/controllers/opentracing/opentracing.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/controllers/opentracing/opentracing.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frame/gin_test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frame/gin_test/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/router/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/golang/leecode001两数之和.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/golang/leecode001两数之和.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
@@ -110,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -123,39 +66,68 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Go Build.go build pingguoxueyuan/interview_questions (1)">
-    <configuration name="go build pingguoxueyuan/interview_questions (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/frame" />
+      <recent name="$PROJECT_DIR$/pkg" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/interview_questions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build pingguoxueyuan/leecode/golang (4)">
+    <configuration name="go build pingguoxueyuan/leecode/golang (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/interview_questions/search2.go" />
-      <package value="pingguoxueyuan/interview_questions" />
+      <filePath value="$PROJECT_DIR$/leecode/golang/58_reverseWords.go" />
+      <package value="pingguoxueyuan/leecode/golang" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/interview_questions (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build pingguoxueyuan/leecode/golang (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/interview_questions/search.go" />
-      <package value="pingguoxueyuan/interview_questions" />
+      <filePath value="$PROJECT_DIR$/leecode/golang/50_第一个只出现一次的字符.go" />
+      <package value="pingguoxueyuan/leecode/golang" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/interview_questions" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build pingguoxueyuan/leecode/golang (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/interview_questions/loadbalance.go" />
-      <package value="pingguoxueyuan/interview_questions" />
+      <filePath value="$PROJECT_DIR$/leecode/golang/03_数组中重复的数字.go" />
+      <package value="pingguoxueyuan/leecode/golang" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build pingguoxueyuan/leecode/golang (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leecode/golang/53_0～n-1中缺失的数字.go" />
+      <package value="pingguoxueyuan/leecode/golang" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build pingguoxueyuan/leecode/golang" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leecode/golang/reverseWords.go" />
+      <package value="pingguoxueyuan/leecode/golang" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build pingguoxueyuan/interview_questions (1)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/interview_questions (2)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/interview_questions" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (4)" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (3)" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (2)" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (1)" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang" />
       </list>
     </recent_temporary>
   </component>
@@ -173,10 +145,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add:interview questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add:interview questions" />
+    <MESSAGE value="add:nacos settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="add:nacos settings" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -186,33 +160,42 @@
       <screen x="-501" y="-1415" width="2560" height="1415" />
     </state>
     <state x="113" y="-1097" key="DiffContextDialog/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062879506" />
-    <state width="1612" height="306" key="GridCell.Tab.0.bottom" timestamp="1628062882367">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state width="1429" height="228" key="GridCell.Tab.0.bottom" timestamp="1630945669718">
+      <screen x="-227" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="1348" height="223" key="GridCell.Tab.0.bottom/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1628006034435" />
-    <state width="1612" height="306" key="GridCell.Tab.0.bottom/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062882367" />
-    <state width="1612" height="306" key="GridCell.Tab.0.center" timestamp="1628062882366">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state width="1429" height="228" key="GridCell.Tab.0.bottom/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669718" />
+    <state width="1966" height="397" key="GridCell.Tab.0.bottom/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
+    <state width="1612" height="381" key="GridCell.Tab.0.bottom/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535657" />
+    <state width="1429" height="228" key="GridCell.Tab.0.center" timestamp="1630945669717">
+      <screen x="-227" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="1348" height="223" key="GridCell.Tab.0.center/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1628006034434" />
-    <state width="1612" height="306" key="GridCell.Tab.0.center/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062882366" />
-    <state width="1612" height="306" key="GridCell.Tab.0.left" timestamp="1628062882366">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state width="1429" height="228" key="GridCell.Tab.0.center/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669717" />
+    <state width="1966" height="397" key="GridCell.Tab.0.center/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
+    <state width="1612" height="381" key="GridCell.Tab.0.center/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535656" />
+    <state width="1429" height="228" key="GridCell.Tab.0.left" timestamp="1630945669716">
+      <screen x="-227" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="1348" height="223" key="GridCell.Tab.0.left/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1628006034434" />
-    <state width="1612" height="306" key="GridCell.Tab.0.left/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062882366" />
-    <state width="1612" height="306" key="GridCell.Tab.0.right" timestamp="1628062882367">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state width="1429" height="228" key="GridCell.Tab.0.left/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669716" />
+    <state width="1966" height="397" key="GridCell.Tab.0.left/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045763" />
+    <state width="1612" height="381" key="GridCell.Tab.0.left/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535655" />
+    <state width="1429" height="228" key="GridCell.Tab.0.right" timestamp="1630945669717">
+      <screen x="-227" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="1348" height="223" key="GridCell.Tab.0.right/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1628006034435" />
-    <state width="1612" height="306" key="GridCell.Tab.0.right/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062882367" />
+    <state width="1429" height="228" key="GridCell.Tab.0.right/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669717" />
+    <state width="1966" height="397" key="GridCell.Tab.0.right/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
+    <state width="1612" height="381" key="GridCell.Tab.0.right/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535656" />
     <state x="521" y="-820" key="VCS.ChangelistChooser" timestamp="1628062892271">
       <screen x="-501" y="-1415" width="2560" height="1415" />
     </state>
     <state x="521" y="-820" key="VCS.ChangelistChooser/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062892271" />
-    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2" timestamp="1628062880963">
+    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2" timestamp="1629180042978">
       <screen x="-501" y="-1415" width="2560" height="1415" />
     </state>
     <state x="269" y="-1000" key="Vcs.Push.Dialog.v2/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062880963" />
+    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629180042978" />
+    <state x="369" y="-994" width="600" height="522" key="find.popup" timestamp="1628650569201">
+      <screen x="-501" y="-1415" width="2560" height="1415" />
+    </state>
+    <state x="369" y="-994" width="600" height="522" key="find.popup/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628650569201" />
   </component>
 </project>

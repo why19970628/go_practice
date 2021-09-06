@@ -8,6 +8,7 @@ import (
 	"pingguoxueyuan/frame/gin_test/router"
 	"runtime"
 	"syscall"
+	"time"
 )
 
 func main() {
@@ -16,8 +17,10 @@ func main() {
 	server := router.InitRouter()
 
 	srv := &http.Server{
-		Addr:    ":8080",
-		Handler: server,
+		Addr:         ":8080",
+		Handler:      server,
+		ReadTimeout:  2 * time.Second,
+		WriteTimeout: 2 * time.Second,
 	}
 
 	go func() {

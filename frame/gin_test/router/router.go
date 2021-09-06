@@ -2,12 +2,14 @@ package router
 
 import (
 	"encoding/json"
+	"github.com/gin-contrib/timeout"
 	"github.com/gin-gonic/gin"
 	ginprometheus "github.com/zsais/go-gin-prometheus"
 	"io"
 	"net/http"
 	"pingguoxueyuan/frame/gin_test/controllers/opentracing"
 	"pingguoxueyuan/frame/gin_test/middware"
+	"time"
 )
 
 type SmsLoginParam struct {
@@ -36,6 +38,10 @@ func InitRouter() *gin.Engine {
 	{
 		testGroup.GET("/rpc", opentracing.Rpc)
 		testGroup.GET("/panic", opentracing.Panic)
+		testGroup.GET("/timeout", timeout.New(
+			timeout.WithTimeout(1000*time.Microsecond),
+			timeout.WithHandler(opentracing.EmptySuccessResponse),
+		))
 	}
 	return router
 }
