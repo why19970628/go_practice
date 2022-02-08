@@ -3,11 +3,11 @@ GOBUILD = $(GOCMD) build
 GOCLEAN = $(GOCMD) clean
 GOTEST = $(GOCMD) test
 GOGET = $(GOCMD) get
-BINARY_NAME = livego
+BINARY_NAME = baogo
 BINARY_UNIX = $(BINARY_NAME)_unix
 
-DOCKER_ACC ?= gwuhaolin
-DOCKER_REPO ?= livego
+DOCKER_ACC ?= registry.cn-shanghai.aliyuncs.com/russell-cloud
+DOCKER_REPO ?= devlop-docker
 
 TAG ?= $(shell git describe --tags --abbrev=0 2>/dev/null)
 

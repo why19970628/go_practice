@@ -55,3 +55,34 @@ func EmptySuccessResponse(c *gin.Context) {
 	c.String(http.StatusOK, "sucess")
 	return
 }
+
+type SmsLoginParam struct {
+	Phone string `json:"phone"`
+	Code  string `json:"code"`
+	Name  string `json:"name"`
+}
+
+type s struct {
+	a SmsLoginParam
+	b string
+}
+
+func Sms(c *gin.Context) {
+
+	a := s{
+		a: SmsLoginParam{
+			Name: "21312",
+			Code: "131",
+		},
+		b: "123",
+	}
+	time.Sleep(time.Second)
+	//panic("123")
+
+	c.JSON(http.StatusOK, gin.H{
+		"errno":  0,
+		"errmsg": "success",
+		"data":   a,
+	})
+	c.Done()
+}

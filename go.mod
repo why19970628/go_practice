@@ -42,6 +42,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v1.1.1
+	github.com/stretchr/testify v1.7.0
 	github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041
 	github.com/tal-tech/go-zero v1.0.28
 	github.com/uber/jaeger-client-go v2.27.0+incompatible

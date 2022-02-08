@@ -11,7 +11,7 @@ import (
 func main() {
 	hystrix.ConfigureCommand("get_baidu", hystrix.CommandConfig{
 		Timeout:               1000, // 运行超过1秒就会报超时错误
-		MaxConcurrentRequests: 100,  // 最大请求数
+		MaxConcurrentRequests: 10,   // 最大请求数
 		SleepWindow:           1000, //熔断发生后的等待恢复时间
 		ErrorPercentThreshold: 25,   // 指明熔断的触发条件:失败调用占总调用次数的比例
 	})

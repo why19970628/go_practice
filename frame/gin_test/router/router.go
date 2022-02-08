@@ -12,12 +12,6 @@ import (
 	"time"
 )
 
-type SmsLoginParam struct {
-	Phone string `json:"phone"`
-	Code  string `json:"code"`
-	Name  string `json:"name"`
-}
-
 func Decode(io io.ReadCloser, v interface{}) error {
 	return json.NewDecoder(io).Decode(v)
 }
@@ -28,7 +22,7 @@ func InitRouter() *gin.Engine {
 	p := ginprometheus.NewPrometheus("gin")
 	p.Use(router)
 
-	router.Use(middware.OpenTracing())
+	router.Use(middware.LoggerHandler(), middware.OpenTracing())
 
 	router.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Welcome Gin Server")
@@ -37,6 +31,7 @@ func InitRouter() *gin.Engine {
 	testGroup := router.Group("/test")
 	{
 		testGroup.GET("/rpc", opentracing.Rpc)
+		testGroup.GET("/sms", opentracing.Sms)
 		testGroup.GET("/panic", opentracing.Panic)
 		testGroup.GET("/timeout", timeout.New(
 			timeout.WithTimeout(1000*time.Microsecond),
