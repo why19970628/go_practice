@@ -19,13 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:nacos settings">
+    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:设计模式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frame/gin_test/controllers/opentracing/opentracing.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/controllers/opentracing/opentracing.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frame/gin_test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frame/gin_test/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/frame/gin_test/router/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/结构型7个/Proxy_代理模式/proxy_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/结构型7个/Proxy_代理模式/proxy_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/行为型11个/21_chain_of_responsibility/chain.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/行为型11个/21_责任链模式/chain_of_responsibility.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/行为型11个/21_chain_of_responsibility/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/行为型11个/21_责任链模式/weather.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/行为型11个/21_chain_of_responsibility/weather_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/行为型11个/21_责任链模式/weather_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/设计原则/SimpleResponsibility/SimpleResponsibility.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/设计原则/单一原则/SimpleResponsibility.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/设计原则/SimpleResponsibility/simple_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/设计原则/单一原则/simple_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/es/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/chan/es/base.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/es/esController.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/chan/es/esController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/goGorn/CornTest.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/client/goGorn/CornTest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/goGorn/goCorn.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/client/goGorn/goCorn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/goGorn/goCorn2.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/client/goGorn/goCorn2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingguoxueyuan/goGorn/gocronNewScheduler.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingguoxueyuan/client/goGorn/gocronNewScheduler.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
@@ -58,7 +68,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/design_pattern/行为型11个/15_strategy_策略模式" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,66 +78,77 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/frame" />
-      <recent name="$PROJECT_DIR$/pkg" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/interview_questions" />
+      <recent name="$PROJECT_DIR$/design_pattern/行为型11个/15_strategy_策略模式/cash" />
+      <recent name="$PROJECT_DIR$/pingguoxueyuan/client" />
+      <recent name="$PROJECT_DIR$/pingguoxueyuan/chan" />
+      <recent name="$PROJECT_DIR$/design_pattern/设计原则" />
+      <recent name="$PROJECT_DIR$/design_pattern/行为型11个/15_strategy_策略模式" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/design_pattern/行为型11个/15_strategy_策略模式" />
+      <recent name="$PROJECT_DIR$/design_pattern/结构型/20_decorator_装饰器" />
+      <recent name="$PROJECT_DIR$/design_pattern/02_adapter" />
+      <recent name="$PROJECT_DIR$/design_pattern" />
+      <recent name="$PROJECT_DIR$/leecode/golang" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build pingguoxueyuan/leecode/golang (4)">
-    <configuration name="go build pingguoxueyuan/leecode/golang (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build pingguoxueyuan/design_pattern/行为型11个/15_strategy_策略模式/cash">
+    <configuration name="go build pingguoxueyuan/design_pattern/行为型11个/模版模式" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leecode/golang/58_reverseWords.go" />
-      <package value="pingguoxueyuan/leecode/golang" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/design_pattern/行为型11个/模版模式/temp.go" />
+      <package value="pingguoxueyuan/design_pattern/行为型11个/模版模式" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/leecode/golang (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build pingguoxueyuan/design_pattern/行为型11个/15_strategy_策略模式/cash" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leecode/golang/50_第一个只出现一次的字符.go" />
-      <package value="pingguoxueyuan/leecode/golang" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/design_pattern/行为型11个/15_strategy_策略模式/cash/discount.go" />
+      <package value="pingguoxueyuan/design_pattern/行为型11个/15_strategy_策略模式/cash" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/leecode/golang (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build pingguoxueyuan/interview_questions" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leecode/golang/03_数组中重复的数字.go" />
-      <package value="pingguoxueyuan/leecode/golang" />
+      <filePath value="$PROJECT_DIR$/interview_questions/最大连续数组.go" />
+      <package value="pingguoxueyuan/interview_questions" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/leecode/golang (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNewChessBoard in pingguoxueyuan/design_pattern/结构型7个/flyweight" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leecode/golang/53_0～n-1中缺失的数字.go" />
-      <package value="pingguoxueyuan/leecode/golang" />
+      <working_directory value="$PROJECT_DIR$/design_pattern/结构型7个/flyweight" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="pingguoxueyuan/design_pattern/结构型7个/flyweight" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewChessBoard\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pingguoxueyuan/leecode/golang" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_SimpleResponsibility in pingguoxueyuan/design_pattern/设计原则/单一原则" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leecode/golang/reverseWords.go" />
-      <package value="pingguoxueyuan/leecode/golang" />
+      <working_directory value="$PROJECT_DIR$/design_pattern/设计原则/单一原则" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="pingguoxueyuan/design_pattern/设计原则/单一原则" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_SimpleResponsibility\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (4)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (3)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (2)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang (1)" />
-        <item itemvalue="Go Build.go build pingguoxueyuan/leecode/golang" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/design_pattern/行为型11个/15_strategy_策略模式/cash" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/design_pattern/行为型11个/模版模式" />
+        <item itemvalue="Go Build.go build pingguoxueyuan/interview_questions" />
+        <item itemvalue="Go Test.TestNewChessBoard in pingguoxueyuan/design_pattern/结构型7个/flyweight" />
+        <item itemvalue="Go Test.Test_SimpleResponsibility in pingguoxueyuan/design_pattern/设计原则/单一原则" />
       </list>
     </recent_temporary>
   </component>
@@ -150,52 +171,108 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add:interview questions" />
     <MESSAGE value="add:nacos settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="add:nacos settings" />
+    <MESSAGE value="add:leecode" />
+    <MESSAGE value="add:设计模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="add:设计模式" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="113" y="-1097" key="DiffContextDialog" timestamp="1628062879506">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state x="1008" y="299" key="#com.intellij.ide.util.MemberChooser" timestamp="1648047815356">
+      <screen x="0" y="25" width="1382" height="875" />
     </state>
-    <state x="113" y="-1097" key="DiffContextDialog/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062879506" />
-    <state width="1429" height="228" key="GridCell.Tab.0.bottom" timestamp="1630945669718">
-      <screen x="-227" y="-1055" width="1920" height="1055" />
+    <state x="1008" y="299" key="#com.intellij.ide.util.MemberChooser/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1648047815356" />
+    <state x="1168" y="-725" key="#com.intellij.ide.util.MemberChooser/0.25.1382.875/-236.-1055.1920.1055@-236.-1055.1920.1055" timestamp="1646742247513" />
+    <state x="1017" y="299" key="#com.intellij.ide.util.MemberChooser/0.25.1391.875@0.25.1391.875" timestamp="1640334218276" />
+    <state width="1340" height="230" key="GridCell.Tab.0.bottom" timestamp="1648088582321">
+      <screen x="0" y="25" width="1384" height="875" />
     </state>
-    <state width="1429" height="228" key="GridCell.Tab.0.bottom/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669718" />
-    <state width="1966" height="397" key="GridCell.Tab.0.bottom/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
-    <state width="1612" height="381" key="GridCell.Tab.0.bottom/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535657" />
-    <state width="1429" height="228" key="GridCell.Tab.0.center" timestamp="1630945669717">
-      <screen x="-227" y="-1055" width="1920" height="1055" />
+    <state width="1422" height="258" key="GridCell.Tab.0.bottom/0.25.1382.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1647773373595" />
+    <state width="1340" height="230" key="GridCell.Tab.0.bottom/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1648048144494" />
+    <state width="1422" height="258" key="GridCell.Tab.0.bottom/0.25.1382.875/-236.-1055.1920.1055@-236.-1055.1920.1055" timestamp="1647827845407" />
+    <state width="1213" height="184" key="GridCell.Tab.0.bottom/0.25.1382.875/-236.-1055.1920.1055@0.25.1382.875" timestamp="1645874364110" />
+    <state width="1162" height="186" key="GridCell.Tab.0.bottom/0.25.1384.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642340761109" />
+    <state width="1340" height="230" key="GridCell.Tab.0.bottom/0.25.1384.875/-236.-1055.1920.1055@0.25.1384.875" timestamp="1648088582321" />
+    <state width="1162" height="186" key="GridCell.Tab.0.bottom/0.25.1386.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642346707696" />
+    <state width="1162" height="173" key="GridCell.Tab.0.bottom/0.25.1386.875/-236.-1055.1920.1055@0.25.1386.875" timestamp="1644495197013" />
+    <state width="1162" height="173" key="GridCell.Tab.0.bottom/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644498043578" />
+    <state width="1593" height="199" key="GridCell.Tab.0.bottom/0.25.1387.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639465592214" />
+    <state width="1263" height="159" key="GridCell.Tab.0.bottom/0.25.1387.875@0.25.1387.875" timestamp="1640439648302" />
+    <state width="1947" height="196" key="GridCell.Tab.0.bottom/0.25.1389.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641460009133" />
+    <state width="1593" height="199" key="GridCell.Tab.0.bottom/0.25.1389.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639466030147" />
+    <state width="1878" height="196" key="GridCell.Tab.0.bottom/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641567886904" />
+    <state width="1593" height="199" key="GridCell.Tab.0.bottom/0.25.1390.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639471315666" />
+    <state width="1593" height="199" key="GridCell.Tab.0.bottom/0.25.1391.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639470865876" />
+    <state width="1261" height="159" key="GridCell.Tab.0.bottom/0.25.1391.875@0.25.1391.875" timestamp="1640334640325" />
+    <state width="1340" height="230" key="GridCell.Tab.0.center" timestamp="1648088582320">
+      <screen x="0" y="25" width="1384" height="875" />
     </state>
-    <state width="1429" height="228" key="GridCell.Tab.0.center/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669717" />
-    <state width="1966" height="397" key="GridCell.Tab.0.center/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
-    <state width="1612" height="381" key="GridCell.Tab.0.center/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535656" />
-    <state width="1429" height="228" key="GridCell.Tab.0.left" timestamp="1630945669716">
-      <screen x="-227" y="-1055" width="1920" height="1055" />
+    <state width="1422" height="258" key="GridCell.Tab.0.center/0.25.1382.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1647773373594" />
+    <state width="1340" height="230" key="GridCell.Tab.0.center/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1648048144493" />
+    <state width="1422" height="258" key="GridCell.Tab.0.center/0.25.1382.875/-236.-1055.1920.1055@-236.-1055.1920.1055" timestamp="1647827845406" />
+    <state width="1213" height="184" key="GridCell.Tab.0.center/0.25.1382.875/-236.-1055.1920.1055@0.25.1382.875" timestamp="1645874364109" />
+    <state width="1162" height="186" key="GridCell.Tab.0.center/0.25.1384.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642340761108" />
+    <state width="1340" height="230" key="GridCell.Tab.0.center/0.25.1384.875/-236.-1055.1920.1055@0.25.1384.875" timestamp="1648088582320" />
+    <state width="1162" height="186" key="GridCell.Tab.0.center/0.25.1386.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642346707694" />
+    <state width="1162" height="173" key="GridCell.Tab.0.center/0.25.1386.875/-236.-1055.1920.1055@0.25.1386.875" timestamp="1644495197012" />
+    <state width="1162" height="173" key="GridCell.Tab.0.center/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644498043578" />
+    <state width="1593" height="199" key="GridCell.Tab.0.center/0.25.1387.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639465592213" />
+    <state width="1263" height="159" key="GridCell.Tab.0.center/0.25.1387.875@0.25.1387.875" timestamp="1640439648301" />
+    <state width="1947" height="196" key="GridCell.Tab.0.center/0.25.1389.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641460009132" />
+    <state width="1593" height="199" key="GridCell.Tab.0.center/0.25.1389.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639466030147" />
+    <state width="1878" height="196" key="GridCell.Tab.0.center/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641567886903" />
+    <state width="1593" height="199" key="GridCell.Tab.0.center/0.25.1390.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639471315664" />
+    <state width="1593" height="199" key="GridCell.Tab.0.center/0.25.1391.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639470865876" />
+    <state width="1261" height="159" key="GridCell.Tab.0.center/0.25.1391.875@0.25.1391.875" timestamp="1640334640324" />
+    <state width="1340" height="230" key="GridCell.Tab.0.left" timestamp="1648088582320">
+      <screen x="0" y="25" width="1384" height="875" />
     </state>
-    <state width="1429" height="228" key="GridCell.Tab.0.left/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669716" />
-    <state width="1966" height="397" key="GridCell.Tab.0.left/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045763" />
-    <state width="1612" height="381" key="GridCell.Tab.0.left/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535655" />
-    <state width="1429" height="228" key="GridCell.Tab.0.right" timestamp="1630945669717">
-      <screen x="-227" y="-1055" width="1920" height="1055" />
+    <state width="1422" height="258" key="GridCell.Tab.0.left/0.25.1382.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1647773373593" />
+    <state width="1340" height="230" key="GridCell.Tab.0.left/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1648048144493" />
+    <state width="1422" height="258" key="GridCell.Tab.0.left/0.25.1382.875/-236.-1055.1920.1055@-236.-1055.1920.1055" timestamp="1647827845406" />
+    <state width="1213" height="184" key="GridCell.Tab.0.left/0.25.1382.875/-236.-1055.1920.1055@0.25.1382.875" timestamp="1645874364108" />
+    <state width="1162" height="186" key="GridCell.Tab.0.left/0.25.1384.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642340761108" />
+    <state width="1340" height="230" key="GridCell.Tab.0.left/0.25.1384.875/-236.-1055.1920.1055@0.25.1384.875" timestamp="1648088582320" />
+    <state width="1162" height="186" key="GridCell.Tab.0.left/0.25.1386.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642346707693" />
+    <state width="1162" height="173" key="GridCell.Tab.0.left/0.25.1386.875/-236.-1055.1920.1055@0.25.1386.875" timestamp="1644495197011" />
+    <state width="1162" height="173" key="GridCell.Tab.0.left/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644498043577" />
+    <state width="1593" height="199" key="GridCell.Tab.0.left/0.25.1387.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639465592212" />
+    <state width="1263" height="159" key="GridCell.Tab.0.left/0.25.1387.875@0.25.1387.875" timestamp="1640439648301" />
+    <state width="1947" height="196" key="GridCell.Tab.0.left/0.25.1389.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641460009131" />
+    <state width="1593" height="199" key="GridCell.Tab.0.left/0.25.1389.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639466030146" />
+    <state width="1878" height="196" key="GridCell.Tab.0.left/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641567886902" />
+    <state width="1593" height="199" key="GridCell.Tab.0.left/0.25.1390.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639471315664" />
+    <state width="1593" height="199" key="GridCell.Tab.0.left/0.25.1391.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639470865875" />
+    <state width="1261" height="159" key="GridCell.Tab.0.left/0.25.1391.875@0.25.1391.875" timestamp="1640334640324" />
+    <state width="1340" height="230" key="GridCell.Tab.0.right" timestamp="1648088582320">
+      <screen x="0" y="25" width="1384" height="875" />
     </state>
-    <state width="1429" height="228" key="GridCell.Tab.0.right/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1630945669717" />
-    <state width="1966" height="397" key="GridCell.Tab.0.right/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629888045764" />
-    <state width="1612" height="381" key="GridCell.Tab.0.right/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629177535656" />
-    <state x="521" y="-820" key="VCS.ChangelistChooser" timestamp="1628062892271">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state width="1422" height="258" key="GridCell.Tab.0.right/0.25.1382.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1647773373594" />
+    <state width="1340" height="230" key="GridCell.Tab.0.right/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1648048144494" />
+    <state width="1422" height="258" key="GridCell.Tab.0.right/0.25.1382.875/-236.-1055.1920.1055@-236.-1055.1920.1055" timestamp="1647827845407" />
+    <state width="1213" height="184" key="GridCell.Tab.0.right/0.25.1382.875/-236.-1055.1920.1055@0.25.1382.875" timestamp="1645874364109" />
+    <state width="1162" height="186" key="GridCell.Tab.0.right/0.25.1384.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642340761109" />
+    <state width="1340" height="230" key="GridCell.Tab.0.right/0.25.1384.875/-236.-1055.1920.1055@0.25.1384.875" timestamp="1648088582320" />
+    <state width="1162" height="186" key="GridCell.Tab.0.right/0.25.1386.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1642346707695" />
+    <state width="1162" height="173" key="GridCell.Tab.0.right/0.25.1386.875/-236.-1055.1920.1055@0.25.1386.875" timestamp="1644495197013" />
+    <state width="1162" height="173" key="GridCell.Tab.0.right/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644498043578" />
+    <state width="1593" height="199" key="GridCell.Tab.0.right/0.25.1387.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639465592213" />
+    <state width="1263" height="159" key="GridCell.Tab.0.right/0.25.1387.875@0.25.1387.875" timestamp="1640439648302" />
+    <state width="1947" height="196" key="GridCell.Tab.0.right/0.25.1389.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641460009132" />
+    <state width="1593" height="199" key="GridCell.Tab.0.right/0.25.1389.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639466030147" />
+    <state width="1878" height="196" key="GridCell.Tab.0.right/0.25.1390.875/-227.-1055.1920.1055@-227.-1055.1920.1055" timestamp="1641567886903" />
+    <state width="1593" height="199" key="GridCell.Tab.0.right/0.25.1390.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639471315665" />
+    <state width="1593" height="199" key="GridCell.Tab.0.right/0.25.1391.875/-296.-1055.1920.1055@-296.-1055.1920.1055" timestamp="1639470865876" />
+    <state width="1261" height="159" key="GridCell.Tab.0.right/0.25.1391.875@0.25.1391.875" timestamp="1640334640325" />
+    <state x="202" y="195" key="Vcs.Push.Dialog.v2" timestamp="1644292705180">
+      <screen x="0" y="25" width="1387" height="875" />
     </state>
-    <state x="521" y="-820" key="VCS.ChangelistChooser/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062892271" />
-    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2" timestamp="1629180042978">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
+    <state x="202" y="195" key="Vcs.Push.Dialog.v2/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644292705180" />
+    <state x="815" y="226" width="567" height="580" key="find.popup" timestamp="1647155075612">
+      <screen x="0" y="25" width="1382" height="875" />
     </state>
-    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628062880963" />
-    <state x="269" y="-1000" key="Vcs.Push.Dialog.v2/0.25.1391.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1629180042978" />
-    <state x="369" y="-994" width="600" height="522" key="find.popup" timestamp="1628650569201">
-      <screen x="-501" y="-1415" width="2560" height="1415" />
-    </state>
-    <state x="369" y="-994" width="600" height="522" key="find.popup/0.25.1390.875/-501.-1415.2560.1415@-501.-1415.2560.1415" timestamp="1628650569201" />
+    <state x="815" y="226" width="567" height="580" key="find.popup/0.25.1382.875/-227.-1055.1920.1055@0.25.1382.875" timestamp="1647155075612" />
+    <state x="820" y="226" width="567" height="522" key="find.popup/0.25.1387.875/-236.-1055.1920.1055@0.25.1387.875" timestamp="1644292663407" />
   </component>
 </project>

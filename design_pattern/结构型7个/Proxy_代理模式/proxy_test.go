@@ -1,6 +1,9 @@
 package proxy
 
-import "testing"
+import (
+	"log"
+	"testing"
+)
 
 func TestProxy1(t *testing.T) {
 
@@ -19,4 +22,8 @@ func TestProxy0(t *testing.T) {
 	if res != "pre:real:after" {
 		t.Fail()
 	}
+}
+
+func TestProxy023(t *testing.T) {
+	log.Printf("1---UserGroup: %+v\n", 1)
 }

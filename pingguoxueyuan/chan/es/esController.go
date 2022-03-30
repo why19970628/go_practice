@@ -23,9 +23,10 @@ func EsInsert() {
 	}
 	fmt.Printf("Indexed user %s to index %s, type %s\n", put1.Id, put1.Index, put1.Type)
 }
+
 //根据id查询
-func Get(){
-	get ,err:= EsClient.Get().Index("ecommerce").Type("product").Id("1").Do(context.Background())
+func Get() {
+	get, err := EsClient.Get().Index("ecommerce").Type("product").Id("1").Do(context.Background())
 	if err != nil {
 		panic(err)
 	}

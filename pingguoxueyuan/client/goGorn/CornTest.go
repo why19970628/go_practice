@@ -24,11 +24,11 @@ func main() {
 	i := 0
 	c := cron.New()
 	spec := "*/5 * * * * ?"
-	c.AddFunc(spec, func() {   // AddFunc 是添加任务的地方，此函数接收两个参数，第一个为表示定时任务的字符串，第二个为真正的真正的任务。
+	c.AddFunc(spec, func() { // AddFunc 是添加任务的地方，此函数接收两个参数，第一个为表示定时任务的字符串，第二个为真正的真正的任务。
 		i++
 		log.Println("cron running:", i)
 	})
 	c.Start()
 
-	select{}
+	select {}
 }

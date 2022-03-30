@@ -1,17 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"github.com/jasonlvhit/gocron"
 	"github.com/spf13/cobra"
-	"fmt"
 	"os"
 )
 
-func print()  {
+func print() {
 	fmt.Println("6666")
 }
-
-
 
 var HistoryOrderGoodsScript1 = &cobra.Command{
 	Use:   "HistoryOrderGoodsScript",
@@ -22,7 +20,6 @@ var HistoryOrderGoodsScript1 = &cobra.Command{
 		<-gocron.Start()
 	},
 }
-
 
 func init() {
 	rootCmd.AddCommand(HistoryOrderGoodsScript1)

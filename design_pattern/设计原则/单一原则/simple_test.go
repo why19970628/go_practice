@@ -1,4 +1,4 @@
-package SimpleResponsibility
+package 单一原则
 
 import "testing"
 

@@ -1,4 +1,7 @@
-package SimpleResponsibility
+package 单一原则
+
+// 单一职责原则（Simple Responsibility Principle, SRP）指不要存在一个以上导致类变更的原因。
+// 假设有一个Class负责两个职责，一旦发生需求变更，修改其中一个职责的逻辑代码，有可能会导致另一个职责的功能发生故障。
 
 import "fmt"
 

@@ -11,7 +11,7 @@ var i int = 0
 
 func task() {
 	fmt.Println("I am running task.", i)
-	i ++
+	i++
 }
 
 func taskWithParams(a int, b string) {
@@ -61,11 +61,11 @@ func main() {
 	//gocron.Clear()
 
 	// Start all the pending jobs
-	<- gocron.Start()
+	<-gocron.Start()
 
 	// also, you can create a new scheduler
 	// to run two schedulers concurrently
 	s := gocron.NewScheduler()
 	s.Every(3).Seconds().Do(task)
-	<- s.Start()
+	<-s.Start()
 }
