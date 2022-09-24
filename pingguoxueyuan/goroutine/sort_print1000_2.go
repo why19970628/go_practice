@@ -2,31 +2,30 @@ package main
 
 import "sync"
 
-var printCount = 5
+var printCount = 100
 
-
-func printAA(wg *sync.WaitGroup,chanA, chanB chan struct{})  {
+func printAA(wg *sync.WaitGroup, chanA, chanB chan struct{}) {
 	defer wg.Done()
-	for i := 0; i <printCount ; i++ {
-			<- chanA
-			println("A")
-			chanB <- struct{}{}
+	for i := 0; i < printCount; i++ {
+		<-chanA
+		println("A")
+		chanB <- struct{}{}
 	}
 }
 
-func printBB(wg *sync.WaitGroup, chanB, chanC chan struct{})  {
+func printBB(wg *sync.WaitGroup, chanB, chanC chan struct{}) {
 	defer wg.Done()
-	for i := 0; i <printCount ; i++ {
-			<- chanB
-			println("B")
-			chanC <- struct{}{}
+	for i := 0; i < printCount; i++ {
+		<-chanB
+		println("B")
+		chanC <- struct{}{}
 	}
 }
 
-func printCC(wg *sync.WaitGroup, chanC, chanA chan struct{})  {
+func printCC(wg *sync.WaitGroup, chanC, chanA chan struct{}) {
 	defer wg.Done()
-	for i := 0; i <printCount ; i++ {
-		<- chanC
+	for i := 0; i < printCount; i++ {
+		<-chanC
 		println("C")
 		chanA <- struct{}{}
 	}
