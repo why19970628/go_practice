@@ -5,10 +5,10 @@ import (
 	"github.com/gin-contrib/timeout"
 	"github.com/gin-gonic/gin"
 	ginprometheus "github.com/zsais/go-gin-prometheus"
+	"go_practice/frame/gin_test/controllers/opentracing"
+	"go_practice/frame/gin_test/middware"
 	"io"
 	"net/http"
-	"pingguoxueyuan/frame/gin_test/controllers/opentracing"
-	"pingguoxueyuan/frame/gin_test/middware"
 	"time"
 )
 

@@ -7,10 +7,10 @@ import (
 	"flag"
 	"fmt"
 
-	"pingguoxueyuan/frame/rpc/hello/hello"
-	"pingguoxueyuan/frame/rpc/hello/internal/config"
-	"pingguoxueyuan/frame/rpc/hello/internal/server"
-	"pingguoxueyuan/frame/rpc/hello/internal/svc"
+	"go_practice/frame/rpc/hello/hello"
+	"go_practice/frame/rpc/hello/internal/config"
+	"go_practice/frame/rpc/hello/internal/server"
+	"go_practice/frame/rpc/hello/internal/svc"
 
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/zrpc"

@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	"pingguoxueyuan/frame/rpc/hello/hello"
-	"pingguoxueyuan/frame/rpc/hello/internal/logic"
-	"pingguoxueyuan/frame/rpc/hello/internal/svc"
+	"go_practice/frame/rpc/hello/hello"
+	"go_practice/frame/rpc/hello/internal/logic"
+	"go_practice/frame/rpc/hello/internal/svc"
 )
 
 type HelloServer struct {

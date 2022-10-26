@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/aliyun/aliyun-tablestore-go-sdk/tablestore"
-	utils "pingguoxueyuan/config"
+	utils "go_practice/config"
 )
 
 //var TableStoreClient

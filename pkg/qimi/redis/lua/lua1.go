@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	uuid "github.com/satori/go.uuid"
+	"go_practice/pkg/qimi/redis"
 	"log"
-	"pingguoxueyuan/pkg/qimi/redis"
 	"sync"
 	"sync/atomic"
 	"time"

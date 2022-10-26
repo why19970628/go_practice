@@ -4,7 +4,7 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
-	utils "pingguoxueyuan/config"
+	utils "go_practice/config"
 	"time"
 )
 

@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	pb "go_practice/frame/rpc/grpc/protos"
 	"google.golang.org/grpc"
-	pb "pingguoxueyuan/frame/rpc/grpc/protos"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	rpc_http "pingguoxueyuan/frame/gin_test/libraries/http"
+	rpc_http "go_practice/frame/gin_test/libraries/http"
 )
 
 func Rpc(c *gin.Context) {

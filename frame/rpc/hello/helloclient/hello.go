@@ -8,7 +8,7 @@ package helloclient
 import (
 	"context"
 
-	"pingguoxueyuan/frame/rpc/hello/hello"
+	"go_practice/frame/rpc/hello/hello"
 
 	"github.com/tal-tech/go-zero/zrpc"
 )

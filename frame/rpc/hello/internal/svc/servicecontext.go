@@ -1,6 +1,6 @@
 package svc
 
-import "pingguoxueyuan/frame/rpc/hello/internal/config"
+import "go_practice/frame/rpc/hello/internal/config"
 
 type ServiceContext struct {
 	c config.Config

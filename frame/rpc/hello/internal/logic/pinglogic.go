@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"pingguoxueyuan/frame/rpc/hello/hello"
-	"pingguoxueyuan/frame/rpc/hello/internal/svc"
+	"go_practice/frame/rpc/hello/hello"
+	"go_practice/frame/rpc/hello/internal/svc"
 
 	"github.com/tal-tech/go-zero/core/logx"
 )

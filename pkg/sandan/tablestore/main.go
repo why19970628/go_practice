@@ -1,7 +1,7 @@
 package main
 
 import (
-	"pingguoxueyuan/pkg/sandan/tablestore/sample"
+	"go_practice/pkg/sandan/tablestore/sample"
 )
 
 func main() {

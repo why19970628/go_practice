@@ -1,11 +1,11 @@
 package main
 
 import (
+	"go_practice/frame/gin_test/router"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
-	"pingguoxueyuan/frame/gin_test/router"
 	"runtime"
 	"syscall"
 	"time"
