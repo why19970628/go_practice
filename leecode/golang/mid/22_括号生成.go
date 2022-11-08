@@ -68,3 +68,28 @@ func digui(index, n, sum, add int, str string, res *[]string) {
 func main() {
 	fmt.Println(generateParenthesis(3))
 }
+
+//链接：https://leetcode.cn/problems/generate-parentheses/solution/shen-du-you-xian-bian-li-zui-jian-jie-yi-ypti/
+
+var res22 []string
+
+func generateParenthesis2(n int) []string {
+	res22 = make([]string, 0)
+	dfs(n, 0, 0, "")
+	return res22
+}
+
+func dfs(n int, lc int, rc int, path string) {
+	if lc == n && rc == n {
+		res22 = append(res22, path)
+		return
+	} else {
+		if lc < n {
+			dfs(n, lc+1, rc, path+"(")
+		}
+		if rc < lc {
+			dfs(n, lc, rc+1, path+")")
+		}
+	}
+
+}
