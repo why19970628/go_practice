@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 //定一个仅包含数字2-9的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 //
@@ -42,7 +45,30 @@ func letterCombinations(digits string) (res []string) {
 	return
 }
 
+func letterCombinations2(digits string) (res []string) {
+	length := len(digits)
+	if length == 0 {
+		return nil
+	}
+	var arr = []string{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}
+	var f func(i int, ans string)
+	f = func(i int, ans string) {
+		if i == length {
+			res = append(res, ans)
+			return
+		}
+		s, _ := strconv.Atoi(string(digits[i]))
+		value := arr[int(s)]
+		for j := 0; j < len(value); j++ {
+			f(i+1, ans+string(value[j]))
+		}
+
+	}
+	f(0, "")
+	return res
+}
+
 func main() {
-	res := letterCombinations("2345")
+	res := letterCombinations2("2345")
 	fmt.Println(res)
 }
