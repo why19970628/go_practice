@@ -1,43 +1,44 @@
 package main
 
 import (
-	"errors"
+	"context"
 	"fmt"
 	"time"
 )
 
-const defaultTimeout time.Duration = time.Millisecond * 100
+func AsyncCall(ctx context.Context, t time.Duration, f func() error) error {
 
-// 利用一个超时控制，实现一个函数超时
-func AsyncCall(t time.Duration, f func() error) error {
-	done := make(chan struct{}, 1)
+	newCtx, cancel := context.WithTimeout(ctx, t)
+	defer cancel()
+
 	errChan := make(chan error, 1)
+	panicChan := make(chan interface{}, 1)
 
 	go func() {
-		err := f()
-		if err != nil {
-			errChan <- err
-		} else {
-			done <- struct{}{}
-		}
+		defer func() {
+			if p := recover(); p != nil {
+				panicChan <- p
+			}
+		}()
+		errChan <- f()
 	}()
 
 	select {
-	case <-done:
-		fmt.Println("call successfully!!!")
-		return nil
+	case <-newCtx.Done():
+		return newCtx.Err()
 	case e := <-errChan:
 		return e
-	case <-time.After(defaultTimeout):
-		return errors.New("timeout")
+	case p := <-panicChan:
+		panic(p)
 	}
-}
 
+}
 func main() {
-	err := AsyncCall(time.Millisecond*50, func() error {
-		time.Sleep(time.Millisecond * 100)
-		return nil
-	})
+	err := AsyncCall(context.Background(),
+		time.Millisecond*50, func() error {
+			time.Sleep(time.Millisecond * 10)
+			return nil
+		})
 	if err != nil {
 		fmt.Println("err::", err)
 	}
