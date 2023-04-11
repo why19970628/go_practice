@@ -14,6 +14,18 @@ func removeElement(nums []int, val int) int {
 	return left
 }
 
+func removeElement111(nums []int, val int) int {
+	endIdx := 0
+	for _, v := range nums {
+		if v != val {
+			nums[endIdx] = v
+			endIdx++
+		}
+	}
+	nums = nums[:endIdx]
+	return endIdx
+}
+
 func removeElement2(nums []int, val int) int {
 	left := 0
 	right := len(nums)
