@@ -15,11 +15,12 @@ func permute(nums []int) [][]int {
 }
 
 func permuteDfs(nums []int, cur int) {
-	if cur == len(nums) {
+	if len(path) == len(nums) {
 		tmp := make([]int, len(path))
 		copy(tmp, path)
 		res = append(res, tmp)
 	}
+	// 这里不能用cur当起点，因为可以有重复数据
 	for i := 0; i < len(nums); i++ {
 		if !st[i] {
 			st[i] = true

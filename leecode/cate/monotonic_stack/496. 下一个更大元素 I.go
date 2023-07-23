@@ -46,6 +46,7 @@ func nextGreaterElement2(nums1 []int, nums2 []int) []int {
 
 	for i := 0; i < len(nums2); i++ {
 		for len(stack) > 0 && nums2[i] > nums2[stack[len(stack)-1]] {
+
 			rightIndex := stack[len(stack)-1]
 			rightValue := nums2[rightIndex]
 			if n1Index, ok := mp[rightValue]; ok {
@@ -60,32 +61,8 @@ func nextGreaterElement2(nums1 []int, nums2 []int) []int {
 	return res
 }
 
-func nextGreaterElement3(nums1 []int, nums2 []int) []int {
-	ans := make([]int, len(nums1))
-	for i := 0; i < len(ans); i++ {
-		ans[i] = -1
-	}
-	mp := make(map[int]int)
-	for i := 0; i < len(nums1); i++ {
-		mp[nums1[i]] = i
-	}
-	stack := make([]int, 0)
-	for i := 0; i < len(nums2); i++ {
-		for len(stack) > 0 && nums2[i] > nums2[stack[len(stack)-1]] {
-			if index, ok := mp[nums2[stack[len(stack)-1]]]; ok {
-				ans[index] = nums2[i]
-			}
-			stack = stack[:len(stack)-1]
-		}
-
-		stack = append(stack, i)
-	}
-
-	return ans
-}
-
 func main() {
 	nums1 := []int{4, 1, 2}
 	nums2 := []int{1, 3, 4, 2}
-	fmt.Println(nextGreaterElement3(nums1, nums2))
+	fmt.Println(nextGreaterElement(nums1, nums2))
 }

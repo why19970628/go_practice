@@ -32,3 +32,20 @@ func reverseList(head *ListNode) *ListNode {
 	}
 	return pre
 }
+
+//双指针
+// pre-> cur->temp
+func reverseList2(head *ListNode) *ListNode {
+	pre := &ListNode{}
+	cur := head
+	for cur != nil {
+		temp := cur.Next
+
+		cur.Next = pre
+
+		// 往哪移动，就把哪的值付给他
+		pre = cur
+		cur = temp
+	}
+	return pre
+}

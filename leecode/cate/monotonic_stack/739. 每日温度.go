@@ -61,6 +61,26 @@ func dailyTemperatures3(arr []int) []int {
 
 	return ans
 }
+
+// 单调栈 单调递增
+func dailyTemperatures4(arr []int) []int {
+	// 单调栈，单调递减
+	var stack []int
+	ans := make([]int, len(arr))
+	for i := 0; i < len(arr); i++ {
+		val := arr[i]
+		for len(stack) > 0 && val > arr[stack[len(stack)-1]] {
+
+			// 计算差值
+			ans[stack[len(stack)-1]] = i - stack[len(stack)-1]
+			// 去除73
+			stack = stack[:len(stack)-1]
+		}
+		stack = append(stack, i)
+	}
+	return ans
+}
+
 func main() {
 	temperatures := []int{73, 74, 75, 71, 69, 72, 76, 73}
 	// [1 1 4 2 1 1 0 0]

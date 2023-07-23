@@ -39,32 +39,22 @@ func removeElements2(head *ListNode, val int) *ListNode {
 	return head
 }
 
-func removeElements22(head *ListNode, val int) *ListNode {
-	for head != nil && head.Val == val {
-		head = head.Next
-	}
-	if head == nil {
-		return head
-	}
-	cur := head
-	for cur.Next != nil {
+// 设置一个虚拟头结点在进行移除节点操作：
+// 那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？
+// 直接使用原来的链表来进行删除操作。
+//设置一个虚拟头结点在进行删除操作。
+
+// 虚拟头节点
+func removeElements3(head *ListNode, val int) *ListNode {
+	dummyHead := &ListNode{}
+	dummyHead.Next = head
+	cur := dummyHead
+	for cur != nil && cur.Next != nil {
 		if cur.Next.Val == val {
 			cur.Next = cur.Next.Next
 		} else {
 			cur = cur.Next
 		}
 	}
-	return head
-}
-
-func removeElements3(head *ListNode, val int) *ListNode {
-	if head == nil {
-		return head
-	}
-
-	head.Next = removeElements3(head.Next, val)
-	if head.Val == val {
-		return head.Next
-	}
-	return head
+	return dummyHead.Next
 }
