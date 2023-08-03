@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sync"
 	"testing"
+	"time"
 )
 
 // 交替打印
@@ -93,4 +94,45 @@ func TestPrintV3(t *testing.T) {
 
 	chanA <- struct{}{}
 	<-chanExist
+}
+
+func TestPrintV4(t *testing.T) {
+	chanA := make(chan struct{})
+	chanB := make(chan struct{})
+
+	go func() {
+		var i int
+		for {
+			select {
+			case <-chanA:
+				i++
+				fmt.Print(i)
+				i++
+				fmt.Print(i)
+				chanB <- struct{}{}
+			}
+		}
+
+	}()
+	go func() {
+		var j rune = 'A'
+		for {
+			select {
+			case <-chanB:
+				if j > 'Z' {
+					return
+				}
+				fmt.Print(string(j))
+				j++
+				fmt.Print(string(j))
+				j++
+				chanA <- struct{}{}
+			}
+		}
+
+	}()
+
+	chanA <- struct{}{}
+
+	time.Sleep(time.Millisecond * 5)
 }

@@ -9,12 +9,12 @@ import (
 
 */
 
-var depth int // 全局变量 最大深度
-var res int   // 记录最终结果
+var depth int  // 全局变量 最大深度
+var resInt int // 记录最终结果
 func findBottomLeftValueV1(root *TreeNode) int {
-	depth, res = 0, 0 // 初始化
+	depth, resInt = 0, 0 // 初始化
 	findBottomLeftValueDFS(root, 1)
-	return res
+	return resInt
 }
 
 func findBottomLeftValueDFS(root *TreeNode, d int) {
@@ -25,7 +25,7 @@ func findBottomLeftValueDFS(root *TreeNode, d int) {
 	// 如果是根节点，并且当前深度比最大深度大，则取值
 	if root.Left == nil && root.Right == nil && depth < d {
 		depth = d
-		res = root.Val
+		resInt = root.Val
 	}
 	findBottomLeftValueDFS(root.Left, d+1) // 隐藏回溯
 	findBottomLeftValueDFS(root.Right, d+1)
