@@ -1,4 +1,4 @@
-package main
+package mapx
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main4() {
 	mapStr := make(map[string]int, 100)
 	//mapStr["stu2"] = 2
 	//mapStr["stu1"] = 1

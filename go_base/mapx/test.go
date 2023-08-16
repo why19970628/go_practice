@@ -1,5 +1,5 @@
 //demo_14.go
-package main
+package mapx
 
 import (
 	"fmt"
@@ -27,7 +27,7 @@ func GetPkuidByEmoji(emoji string) string {
 	return tmp
 }
 
-func main() {
+func main2() {
 	var p1 map[int]string
 	p1 = make(map[int]string)
 	p1[1] = "Tom"

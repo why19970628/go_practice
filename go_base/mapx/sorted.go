@@ -1,4 +1,4 @@
-package main
+package mapx
 
 import "fmt"
 
@@ -12,7 +12,7 @@ func sortMapValue(mp map[string]int) {
 	fmt.Println("reverseMap:", reverseMap)
 }
 
-func main() {
+func main3() {
 	map1 := make(map[string]int)
 	map1["Mon"] = 1
 	map1["Tue"] = 5

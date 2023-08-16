@@ -1,4 +1,4 @@
-package main
+package mapx
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func (m *M) Get(k interface{}) interface{} {
 	return m.Map[k]
 }
 
-func main() {
+func main1() {
 	m := &M{
 		Map:  make(map[interface{}]interface{}),
 		lock: new(sync.Mutex),

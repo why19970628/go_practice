@@ -1,9 +1,9 @@
-package main
+package mapx
 
 import "fmt"
 import "sort"
 
-func main() {
+func main5() {
 	map1 := make(map[string]int)
 	map1["Mon"] = 1
 	map1["Tue"] = 2

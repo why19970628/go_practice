@@ -1,8 +1,8 @@
-package main
+package mapx
 
 import "fmt"
 
-func main() {
+func main6() {
 	sliceMap := make(map[string][]int, 8)
 	fmt.Println(sliceMap)
 	v, ok := sliceMap["中国"]
