@@ -13,10 +13,14 @@ const (
 )
 
 // Entry represents a key-value pair with expiration time.
-type Entry struct {
-	Value      interface{}
-	Expiration time.Time
-}
+type (
+	Entry struct {
+		Value      interface{}
+		Expiration time.Time
+	}
+
+	SafeMapOption func(opt *SafeMapWithExpirationOption)
+)
 
 // SafeMapWithExpiration provides a map alternative to avoid memory leak
 // and supports key-value pairs with expiration time.
@@ -37,15 +41,15 @@ type SafeMapWithExpirationOption struct {
 }
 
 // NewSafeMapWithExpiration returns a SafeMapWithExpiration.
-func NewSafeMapWithExpiration(opt *SafeMapWithExpirationOption) *SafeMapWithExpiration {
-	if opt == nil {
-		opt = new(SafeMapWithExpirationOption)
+func NewSafeMapWithExpiration(opts ...SafeMapOption) *SafeMapWithExpiration {
+	o := &SafeMapWithExpirationOption{}
+	for _, opt := range opts {
+		opt(o)
 	}
-	opt.init()
 	return &SafeMapWithExpiration{
 		dirtyOld: make(map[interface{}]Entry),
 		dirtyNew: make(map[interface{}]Entry),
-		opt:      opt,
+		opt:      o,
 	}
 }
 func (s *SafeMapWithExpirationOption) init() {
@@ -60,16 +64,22 @@ func (s *SafeMapWithExpirationOption) init() {
 	}
 }
 
-func (s *SafeMapWithExpirationOption) WithCopyThreshold(val int) {
-	s.copyThreshold = val
+func WithCopyThreshold(val int) SafeMapOption {
+	return func(opt *SafeMapWithExpirationOption) {
+		opt.copyThreshold = val
+	}
 }
 
-func (s *SafeMapWithExpirationOption) WithMaxDeletion(val int) {
-	s.maxDeletion = val
+func WithMaxDeletion(val int) SafeMapOption {
+	return func(opt *SafeMapWithExpirationOption) {
+		opt.maxDeletion = val
+	}
 }
 
-func (s *SafeMapWithExpirationOption) WithCleanUpDefaultTime(t time.Duration) {
-	s.cleanUpDuration = t
+func WithCleanUpDefaultTime(t time.Duration) SafeMapOption {
+	return func(opt *SafeMapWithExpirationOption) {
+		opt.cleanUpDuration = t
+	}
 }
 
 // Del deletes the value with the given key from m.
