@@ -22,6 +22,13 @@ type (
 	SafeMapOption func(opt *SafeMapWithExpirationOption)
 )
 
+func (e Entry) expire() bool {
+	if !e.Expiration.IsZero() && e.Expiration.Before(time.Now()) {
+		return true
+	}
+	return false
+}
+
 // SafeMapWithExpiration provides a map alternative to avoid memory leak
 // and supports key-value pairs with expiration time.
 type SafeMapWithExpiration struct {
@@ -117,7 +124,7 @@ func (s *SafeMapWithExpiration) Get(key interface{}) (interface{}, bool) {
 	defer s.lock.RUnlock()
 
 	if val, ok := s.dirtyOld[key]; ok {
-		if s.isExpire(val.Expiration) {
+		if val.expire() {
 			delete(s.dirtyOld, key)
 			s.deletionOld++
 			return nil, false
@@ -127,7 +134,7 @@ func (s *SafeMapWithExpiration) Get(key interface{}) (interface{}, bool) {
 
 	val, ok := s.dirtyNew[key]
 	if ok {
-		if s.isExpire(val.Expiration) {
+		if val.expire() {
 			delete(s.dirtyNew, key)
 			s.deletionNew++
 			return nil, false
