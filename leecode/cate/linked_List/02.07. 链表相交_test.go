@@ -62,3 +62,22 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	}
 	return traceAB
 }
+
+func getIntersectionNodeMapV2(headA, headB *ListNode) *ListNode {
+	if headA == nil || headB == nil {
+		return nil
+	}
+	mp := make(map[*ListNode]struct{}, 0)
+	for headA != nil {
+		mp[headA] = struct{}{}
+		headA = headA.Next
+	}
+	for headB != nil {
+		if _, ok := mp[headB]; ok {
+			return headB
+		}
+		headB = headB.Next
+	}
+	return nil
+
+}

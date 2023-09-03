@@ -22,16 +22,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:贪心">
+    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="optimize:优化">
+      <change afterPath="$PROJECT_DIR$/leecode/sort/select_sort.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/SyncMap.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/SyncMap.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/map_delete.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/map_of_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/map_of_map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/sort_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/sort_map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/sort_map_right.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/sort_map_right.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/sorted.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/sorted.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base/map/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base/mapx/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/greedy_alg/1005.K次取反后最大化的数组和_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/greedy_alg/1005.K次取反后最大化的数组和_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/greedy_alg/53. 最大子序和_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/greedy_alg/53. 最大子序和_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/02.07. 链表相交.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/02.07. 链表相交_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/19.删除链表的倒数第N个节点.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/19.删除链表的倒数第N个节点_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/203. 移除链表元素.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/203. 移除链表元素_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/206. 反转链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/206. 反转链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/monotonic_stack/739. 每日温度.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/monotonic_stack/739. 每日温度.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/cate/tree/226.翻转二叉树.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/tree/226.翻转二叉树.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/sort/BubbleSort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/BubbleSort.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/sort/merge_sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/merge_sort.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/sort/quick.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/sort/quick_sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/quick_sort.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leecode/sort/select_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/singleflight/singleflight.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/singleflight/singleflight.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,83 +96,73 @@
       <recent name="$PROJECT_DIR$/leecode/golang/mid" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/leecode/sort" />
       <recent name="$PROJECT_DIR$/leecode/cate/tree" />
       <recent name="$PROJECT_DIR$/leecode/cate/string" />
       <recent name="$PROJECT_DIR$/leecode/cate/stack_list" />
       <recent name="$PROJECT_DIR$/leecode/cate" />
-      <recent name="$PROJECT_DIR$/design_pattern/practice/meituan/reword" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSafeMap in go_practice/go_base/mapx">
-    <configuration name="TestCanJump in go_practice/leecode/cate/greedy_alg" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build go_practice/leecode/cate/dp">
+    <configuration name="go build go_practice/leecode/cate/dp" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$/leecode/cate/greedy_alg" />
-      <framework value="gotest" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_practice/leecode/cate/greedy_alg" />
+      <filePath value="$PROJECT_DIR$/leecode/cate/dp/746. 使用最小花费爬楼梯.go" />
+      <package value="go_practice/leecode/cate/dp" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestCanJump\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCandy in go_practice/leecode/cate/greedy_alg" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_practice/leecode/cate/monotonic_stack (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$/leecode/cate/greedy_alg" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_practice/leecode/cate/greedy_alg" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" />
+      <package value="go_practice/leecode/cate/monotonic_stack" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestCandy\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLargestSumAfterKNegations in go_practice/leecode/cate/greedy_alg" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_practice/pkg (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$/leecode/cate/greedy_alg" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_practice/leecode/cate/greedy_alg" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pkg/haoweilai.go" />
+      <package value="go_practice/pkg" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestLargestSumAfterKNegations\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLemonadeChange4 in go_practice/leecode/cate/greedy_alg" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_practice/pkg (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$/leecode/cate/greedy_alg" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_practice/leecode/cate/greedy_alg" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pkg/haoweilai_master_worker.go" />
+      <package value="go_practice/pkg" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestLemonadeChange4\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSafeMap in go_practice/go_base/mapx" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_practice/pkg" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$/go_base/mapx" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_practice/go_base/mapx" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pkg/didi.go" />
+      <package value="go_practice/pkg" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestSafeMap\E$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestCanJump in go_practice/leecode/cate/greedy_alg" />
-      <item itemvalue="Go Test.TestLargestSumAfterKNegations in go_practice/leecode/cate/greedy_alg" />
-      <item itemvalue="Go Test.TestCandy in go_practice/leecode/cate/greedy_alg" />
-      <item itemvalue="Go Test.TestLemonadeChange4 in go_practice/leecode/cate/greedy_alg" />
-      <item itemvalue="Go Test.TestSafeMap in go_practice/go_base/mapx" />
+      <item itemvalue="Go Build.go build go_practice/pkg" />
+      <item itemvalue="Go Build.go build go_practice/pkg (1)" />
+      <item itemvalue="Go Build.go build go_practice/pkg (2)" />
+      <item itemvalue="Go Build.go build go_practice/leecode/cate/monotonic_stack (1)" />
+      <item itemvalue="Go Build.go build go_practice/leecode/cate/dp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSafeMap in go_practice/go_base/mapx" />
-        <item itemvalue="Go Test.TestLemonadeChange4 in go_practice/leecode/cate/greedy_alg" />
-        <item itemvalue="Go Test.TestCandy in go_practice/leecode/cate/greedy_alg" />
-        <item itemvalue="Go Test.TestLargestSumAfterKNegations in go_practice/leecode/cate/greedy_alg" />
-        <item itemvalue="Go Test.TestCanJump in go_practice/leecode/cate/greedy_alg" />
+        <item itemvalue="Go Build.go build go_practice/leecode/cate/dp" />
+        <item itemvalue="Go Build.go build go_practice/leecode/cate/monotonic_stack (1)" />
+        <item itemvalue="Go Build.go build go_practice/pkg (1)" />
+        <item itemvalue="Go Build.go build go_practice/pkg (2)" />
+        <item itemvalue="Go Build.go build go_practice/pkg" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +202,10 @@
     <MESSAGE value="add:tree" />
     <MESSAGE value="add:tree alg" />
     <MESSAGE value="add:贪心" />
-    <option name="LAST_COMMIT_MESSAGE" value="add:贪心" />
+    <MESSAGE value="feat:实现map避免oom和过期时间删除" />
+    <MESSAGE value="optimize:safemap init" />
+    <MESSAGE value="optimize:优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize:优化" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -219,30 +219,30 @@
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state x="561" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1390.875@0.25.1390.875" timestamp="1690725245764" />
-    <state width="1321" height="106" key="GridCell.Tab.0.bottom" timestamp="1692190231316">
-      <screen x="-320" y="-1055" width="1920" height="1055" />
+    <state width="1209" height="262" key="GridCell.Tab.0.bottom" timestamp="1693745833510">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state width="1321" height="106" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190231316" />
-    <state width="1321" height="247" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691383942791" />
-    <state width="1321" height="247" key="GridCell.Tab.0.bottom/0.25.1390.875@0.25.1390.875" timestamp="1691477153260" />
-    <state width="1321" height="106" key="GridCell.Tab.0.center" timestamp="1692190231315">
-      <screen x="-320" y="-1055" width="1920" height="1055" />
+    <state width="1515" height="157" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652836" />
+    <state width="1209" height="140" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256825" />
+    <state width="1209" height="262" key="GridCell.Tab.0.bottom/0.25.1390.875@0.25.1390.875" timestamp="1693745833510" />
+    <state width="1209" height="262" key="GridCell.Tab.0.center" timestamp="1693745833509">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state width="1321" height="106" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190231315" />
-    <state width="1321" height="247" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691383942790" />
-    <state width="1321" height="247" key="GridCell.Tab.0.center/0.25.1390.875@0.25.1390.875" timestamp="1691477153260" />
-    <state width="1321" height="106" key="GridCell.Tab.0.left" timestamp="1692190231313">
-      <screen x="-320" y="-1055" width="1920" height="1055" />
+    <state width="1515" height="157" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652835" />
+    <state width="1209" height="140" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.center/0.25.1390.875@0.25.1390.875" timestamp="1693745833509" />
+    <state width="1209" height="262" key="GridCell.Tab.0.left" timestamp="1693745833508">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state width="1321" height="106" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190231313" />
-    <state width="1321" height="247" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691383942789" />
-    <state width="1321" height="247" key="GridCell.Tab.0.left/0.25.1390.875@0.25.1390.875" timestamp="1691477153259" />
-    <state width="1321" height="106" key="GridCell.Tab.0.right" timestamp="1692190231316">
-      <screen x="-320" y="-1055" width="1920" height="1055" />
+    <state width="1515" height="157" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652835" />
+    <state width="1209" height="140" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.left/0.25.1390.875@0.25.1390.875" timestamp="1693745833508" />
+    <state width="1209" height="262" key="GridCell.Tab.0.right" timestamp="1693745833509">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state width="1321" height="106" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190231316" />
-    <state width="1321" height="247" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691383942790" />
-    <state width="1321" height="247" key="GridCell.Tab.0.right/0.25.1390.875@0.25.1390.875" timestamp="1691477153260" />
+    <state width="1515" height="157" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652836" />
+    <state width="1209" height="140" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.right/0.25.1390.875@0.25.1390.875" timestamp="1693745833509" />
     <state width="1321" height="334" key="GridCell.Tab.1.bottom" timestamp="1691079834012">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
@@ -263,24 +263,26 @@
     </state>
     <state width="1321" height="334" key="GridCell.Tab.1.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691032238152" />
     <state width="1321" height="334" key="GridCell.Tab.1.right/0.25.1390.875@0.25.1390.875" timestamp="1691079834011" />
-    <state x="312" y="194" key="Vcs.Push.Dialog.v2" timestamp="1691079980159">
+    <state x="312" y="194" key="Vcs.Push.Dialog.v2" timestamp="1692277860864">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state x="312" y="194" key="Vcs.Push.Dialog.v2/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1686231023365" />
-    <state x="312" y="194" key="Vcs.Push.Dialog.v2/0.25.1390.875@0.25.1390.875" timestamp="1691079980159" />
-    <state x="495" y="376" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1690545012321">
+    <state x="111" y="-851" key="Vcs.Push.Dialog.v2/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190955995" />
+    <state x="312" y="194" key="Vcs.Push.Dialog.v2/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1692277860864" />
+    <state x="312" y="194" key="Vcs.Push.Dialog.v2/0.25.1390.875@0.25.1390.875" timestamp="1692198825700" />
+    <state x="495" y="376" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1692773103426">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
+    <state x="495" y="376" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1692773103426" />
     <state x="495" y="376" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1390.875@0.25.1390.875" timestamp="1690545012321" />
-    <state x="663" y="213" width="595" height="522" key="find.popup" timestamp="1690895206995">
+    <state x="526" y="205" width="595" height="522" key="find.popup" timestamp="1693538328042">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state x="663" y="213" width="595" height="522" key="find.popup/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1690895206995" />
-    <state x="663" y="213" width="595" height="522" key="find.popup/0.25.1390.875@0.25.1390.875" timestamp="1690116558356" />
-    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1691058503811">
+    <state x="663" y="213" width="595" height="522" key="find.popup/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1692964823314" />
+    <state x="526" y="205" width="595" height="522" key="find.popup/0.25.1390.875@0.25.1390.875" timestamp="1693538328042" />
+    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1693754123403">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
-    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691058503811" />
-    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1390.875@0.25.1390.875" timestamp="1690116607607" />
+    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556184935" />
+    <state x="659" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1390.875@0.25.1390.875" timestamp="1693754123403" />
   </component>
 </project>

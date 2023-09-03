@@ -51,6 +51,7 @@ func trapV2(height []int) int {
 	maxLeft[0] = height[0]
 	maxRight[0] = height[len(height)-1]
 
+	// 记录每个柱子左边柱子最大高度
 	for i := 1; i < len(height)-1; i++ {
 		maxLeft[i] = max(height[i], maxLeft[i-1])
 	}
@@ -58,7 +59,7 @@ func trapV2(height []int) int {
 	for i := len(height) - 2; i >= 0; i-- {
 		maxRight[i] = max(height[i], maxRight[i+1])
 	}
-
+	// 当前列雨水面积：min(左边柱子的最高高度，记录右边柱子的最高高度) - 当前柱子高度。
 	sum := 0
 	for i := 1; i < len(height)-1; i++ {
 		h := min(maxLeft[i], maxRight[i]) - height[i]
@@ -87,6 +88,7 @@ func max(a, b int) int {
 		return b
 	}
 }
+
 func main() {
 	fmt.Println(trapV2([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}))
 }

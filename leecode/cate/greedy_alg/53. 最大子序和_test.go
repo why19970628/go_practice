@@ -25,8 +25,7 @@ func maxSubArrayV3(nums []int) int {
 		if count > result {
 			result = count
 		}
-		// 局部最优的情况下，并记录最大的“连续和”，可以推出全局最优。
-		//
+		// 局部最优的情况下，并记录最大的"连续和",可以推出全局最优。
 		//从代码角度上来讲：遍历 nums，从头开始用 count 累积，如果 count 一旦加上 nums[i]变为负数，那么就应该从 nums[i+1]开始从 0 累积 count 了，因为已经变为负数的 count，只会拖累总和。
 		if count < 0 {
 			count = 0

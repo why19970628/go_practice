@@ -49,3 +49,31 @@ func reverseList2(head *ListNode) *ListNode {
 	}
 	return pre
 }
+
+// pre->cur->temp
+func reverseList3(head *ListNode) *ListNode {
+	pre := &ListNode{}
+	cur := head
+	for cur != nil {
+		temp := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = temp
+	}
+	return pre
+}
+
+//  pre cur->temp
+
+//  pre<-cur<-temp
+func reverseList4(node *ListNode) *ListNode {
+	pre := &ListNode{}
+	cur := node
+	for cur != nil {
+		temp := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = temp
+	}
+	return pre
+}
