@@ -149,8 +149,26 @@ func quickSortV3(nums []int, l, r int) {
 	quickSortV3(nums, l, i-1)
 	quickSortV3(nums, i+1, r)
 }
+
+func quickSortV4(nums []int) []int {
+	if len(nums) <= 1 {
+		return nums
+	}
+	pivot := nums[0]
+	var left, right []int
+	for _, v := range nums[1:] {
+		if v <= pivot {
+			left = append(left, v)
+		} else {
+			right = append(right, v)
+		}
+	}
+	return append(quickSortV4(left), append([]int{pivot}, quickSortV4(right)...)...)
+}
 func main() {
 	testArr := []int{2, 5, 3, 7, 4, 5, 8, 1, 4, 0}
 	quickSortV3(testArr, 0, len(testArr)-1)
+
+	fmt.Println(quickSortV4(testArr))
 	fmt.Println(testArr)
 }

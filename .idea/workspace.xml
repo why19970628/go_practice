@@ -22,23 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="optimize:优化">
-      <change afterPath="$PROJECT_DIR$/leecode/sort/select_sort.go" afterDir="false" />
+    <list default="true" id="a127ce6b-a901-4e8c-b57d-cf9d084381c4" name="Default Changelist" comment="add:dp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/greedy_alg/53. 最大子序和_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/greedy_alg/53. 最大子序和_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/02.07. 链表相交.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/02.07. 链表相交_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/19.删除链表的倒数第N个节点.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/19.删除链表的倒数第N个节点_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/203. 移除链表元素.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/203. 移除链表元素_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/linked_List/206. 反转链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/linked_List/206. 反转链表.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/monotonic_stack/739. 每日温度.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/monotonic_stack/739. 每日温度.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/cate/tree/226.翻转二叉树.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/cate/tree/226.翻转二叉树.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/sort/BubbleSort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/BubbleSort.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/sort/merge_sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/merge_sort.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/sort/quick.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/leecode/sort/quick_sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leecode/sort/quick_sort.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leecode/sort/select_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/singleflight/singleflight.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/singleflight/singleflight.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +89,7 @@
       <recent name="$PROJECT_DIR$/leecode/cate" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_practice/leecode/cate/dp">
+  <component name="RunManager" selected="Go Build.go build go_practice/leecode/sort">
     <configuration name="go build go_practice/leecode/cate/dp" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_practice" />
       <working_directory value="$PROJECT_DIR$" />
@@ -119,6 +105,15 @@
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/leecode/cate/monotonic_stack/42. 接雨水.go" />
       <package value="go_practice/leecode/cate/monotonic_stack" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_practice/leecode/sort" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leecode/sort/quick_sort.go" />
+      <package value="go_practice/leecode/sort" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -140,29 +135,20 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_practice/pkg" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/pkg/didi.go" />
-      <package value="go_practice/pkg" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Build.go build go_practice/pkg" />
       <item itemvalue="Go Build.go build go_practice/pkg (1)" />
       <item itemvalue="Go Build.go build go_practice/pkg (2)" />
       <item itemvalue="Go Build.go build go_practice/leecode/cate/monotonic_stack (1)" />
       <item itemvalue="Go Build.go build go_practice/leecode/cate/dp" />
+      <item itemvalue="Go Build.go build go_practice/leecode/sort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go_practice/leecode/sort" />
         <item itemvalue="Go Build.go build go_practice/leecode/cate/dp" />
         <item itemvalue="Go Build.go build go_practice/leecode/cate/monotonic_stack (1)" />
         <item itemvalue="Go Build.go build go_practice/pkg (1)" />
         <item itemvalue="Go Build.go build go_practice/pkg (2)" />
-        <item itemvalue="Go Build.go build go_practice/pkg" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +191,8 @@
     <MESSAGE value="feat:实现map避免oom和过期时间删除" />
     <MESSAGE value="optimize:safemap init" />
     <MESSAGE value="optimize:优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize:优化" />
+    <MESSAGE value="add:dp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add:dp" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -219,29 +206,29 @@
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state x="561" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1390.875@0.25.1390.875" timestamp="1690725245764" />
-    <state width="1209" height="262" key="GridCell.Tab.0.bottom" timestamp="1693745833510">
+    <state width="1209" height="262" key="GridCell.Tab.0.bottom" timestamp="1693793571334">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1515" height="157" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652836" />
-    <state width="1209" height="140" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256825" />
+    <state width="1209" height="262" key="GridCell.Tab.0.bottom/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693793571334" />
     <state width="1209" height="262" key="GridCell.Tab.0.bottom/0.25.1390.875@0.25.1390.875" timestamp="1693745833510" />
-    <state width="1209" height="262" key="GridCell.Tab.0.center" timestamp="1693745833509">
+    <state width="1209" height="262" key="GridCell.Tab.0.center" timestamp="1693793571333">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1515" height="157" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652835" />
-    <state width="1209" height="140" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.center/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693793571333" />
     <state width="1209" height="262" key="GridCell.Tab.0.center/0.25.1390.875@0.25.1390.875" timestamp="1693745833509" />
-    <state width="1209" height="262" key="GridCell.Tab.0.left" timestamp="1693745833508">
+    <state width="1209" height="262" key="GridCell.Tab.0.left" timestamp="1693793571332">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1515" height="157" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652835" />
-    <state width="1209" height="140" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.left/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693793571332" />
     <state width="1209" height="262" key="GridCell.Tab.0.left/0.25.1390.875@0.25.1390.875" timestamp="1693745833508" />
-    <state width="1209" height="262" key="GridCell.Tab.0.right" timestamp="1693745833509">
+    <state width="1209" height="262" key="GridCell.Tab.0.right" timestamp="1693793571333">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1515" height="157" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1693278652836" />
-    <state width="1209" height="140" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693556256824" />
+    <state width="1209" height="262" key="GridCell.Tab.0.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1693793571333" />
     <state width="1209" height="262" key="GridCell.Tab.0.right/0.25.1390.875@0.25.1390.875" timestamp="1693745833509" />
     <state width="1321" height="334" key="GridCell.Tab.1.bottom" timestamp="1691079834012">
       <screen x="0" y="25" width="1390" height="875" />
@@ -263,12 +250,12 @@
     </state>
     <state width="1321" height="334" key="GridCell.Tab.1.right/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1691032238152" />
     <state width="1321" height="334" key="GridCell.Tab.1.right/0.25.1390.875@0.25.1390.875" timestamp="1691079834011" />
-    <state x="312" y="194" key="Vcs.Push.Dialog.v2" timestamp="1692277860864">
+    <state x="312" y="194" key="Vcs.Push.Dialog.v2" timestamp="1693756779128">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state x="111" y="-851" key="Vcs.Push.Dialog.v2/-320.-1055.1920.1055/0.25.1390.875@-320.-1055.1920.1055" timestamp="1692190955995" />
     <state x="312" y="194" key="Vcs.Push.Dialog.v2/-320.-1055.1920.1055/0.25.1390.875@0.25.1390.875" timestamp="1692277860864" />
-    <state x="312" y="194" key="Vcs.Push.Dialog.v2/0.25.1390.875@0.25.1390.875" timestamp="1692198825700" />
+    <state x="312" y="194" key="Vcs.Push.Dialog.v2/0.25.1390.875@0.25.1390.875" timestamp="1693756779128" />
     <state x="495" y="376" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1692773103426">
       <screen x="0" y="25" width="1390" height="875" />
     </state>
