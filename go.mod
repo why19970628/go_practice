@@ -45,6 +45,7 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041
 	github.com/tal-tech/go-zero v1.0.28
+	github.com/tealeg/xlsx v1.0.5 // indirect
 	github.com/uber/jaeger-client-go v2.27.0+incompatible
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	github.com/valyala/fasthttp v1.28.0 // indirect

@@ -36,3 +36,5 @@ build/
 *.yaml
 *.json
 
+go_practice
+*.xlsx

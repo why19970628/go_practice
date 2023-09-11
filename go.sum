@@ -585,6 +585,8 @@ github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041 h1:5CjnwaE1
 github.com/syyongx/go-wordsfilter v0.0.0-20190622081656-74232c786041/go.mod h1:Z3aS1bQVPx2BLLsWOT1lf9yaO1Su1U2JGG5pxpbJjBQ=
 github.com/tal-tech/go-zero v1.0.28 h1:+VjezZgc30CrbAizYOCytJNfr6Mqpnk/0twXLiehk2s=
 github.com/tal-tech/go-zero v1.0.28/go.mod h1:MKbU50buAhoovhf4U7E4D4kqpgvcz6mD5jumuk15Iu8=
+github.com/tealeg/xlsx v1.0.5 h1:+f8oFmvY8Gw1iUXzPk+kz+4GpbDZPK1FhPiQRd+ypgE=
+github.com/tealeg/xlsx v1.0.5/go.mod h1:btRS8dz54TDnvKNosuAqxrM1QgN1udgk9O34bDCnORM=
 github.com/tebeka/strftime v0.1.3 h1:5HQXOqWKYRFfNyBMNVc9z5+QzuBtIXy03psIhtdJYto=
 github.com/tebeka/strftime v0.1.3/go.mod h1:7wJm3dZlpr4l/oVK0t1HYIc4rMzQ2XJlOMIUJUJH6XQ=
 github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
