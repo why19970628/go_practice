@@ -11,7 +11,6 @@ package main
 */
 
 func climbStairs(n int) int {
-
 	bp := make([]int, n+1)
 	bp[1] = 1
 	bp[2] = 2

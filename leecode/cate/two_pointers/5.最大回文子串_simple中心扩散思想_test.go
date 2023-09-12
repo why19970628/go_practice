@@ -33,9 +33,26 @@ func max1(a, b, c string) string {
 		resp = c
 	}
 	return resp
+}
 
+func MaxSubHuiWenV2(s string) string {
+	resp := ""
+	for i := 0; i < len(s); i++ {
+		a := expandV2(i, i, s)
+		b := expandV2(i, i+1, s)
+		resp = max1(a, b, resp)
+	}
+	return resp
+}
+
+func expandV2(i, j int, s string) string {
+	for i >= 0 && j < len(s) && s[i] == s[j] {
+		i--
+		j++
+	}
+	return s[i+1 : j]
 }
 
 func TestMaxSubHuiWen(t *testing.T) {
-	fmt.Println(MaxSubHuiWen("12321"))
+	fmt.Println(MaxSubHuiWenV2("12345654321"))
 }

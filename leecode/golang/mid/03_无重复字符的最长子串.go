@@ -5,7 +5,48 @@ import "fmt"
 func main() {
 	//f1_暴力法()
 	fmt.Println(lengthOfLongestSubstring2("dvdf"))
+}
 
+/*
+   r
+abcadb
+l
+
+a 1
+b 1
+c 1
+*/
+func lengthOfLongestSubstring(s string) int {
+	resp := 0
+	left, right := 0, 0
+	mp := make(map[byte]int)
+
+	for right < len(s) {
+		r := s[right]
+		mp[r]++
+		right++
+
+		// 重新组合非重复字符串
+		for mp[r] > 1 {
+			//移动左指针
+			l := s[left]
+			if _, ok := mp[l]; ok {
+				mp[l]--
+			}
+			left++
+		}
+
+		resp = max(resp, right-left)
+	}
+
+	return resp
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
 
 // 2. 滑动窗口
