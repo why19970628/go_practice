@@ -1,4 +1,4 @@
-package main
+package tree
 
 import "fmt"
 
@@ -8,17 +8,17 @@ import "fmt"
 //	right *TreeNode2 // 右子节点
 //}
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 // 深度优先搜索
 
 // 1.深度优先搜索和二叉树的前序遍历比较类似。
 // 2.利用递归的方式不停下探树的深度。
 // 3.递归的终止条件是如果节点为空就返回0。然后判断左右子树最大值同时加1来表示当前节点的高度。
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 func maxDepth(root *TreeNode) int {
 	// 如果节点为空就不再递归下探深度
