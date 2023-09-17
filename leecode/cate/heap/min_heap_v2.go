@@ -1,4 +1,4 @@
-package heap
+package main
 
 type MinHeap struct {
 	heap []int

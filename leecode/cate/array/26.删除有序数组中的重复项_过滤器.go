@@ -19,6 +19,17 @@ func removeDuplicates(nums []int) int {
 	return len(nums)
 }
 
+func removeDuplicatesV2(nums []int) int {
+	count := 0
+	for i, num := range nums {
+		if i == 0 || nums[i] != nums[i-1] {
+			nums[count] = num
+			count++
+		}
+	}
+	return count
+}
+
 func main() {
 	fmt.Println(removeDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}))
 }

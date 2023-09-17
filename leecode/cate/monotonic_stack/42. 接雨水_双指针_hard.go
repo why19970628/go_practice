@@ -49,7 +49,7 @@ func trapV2(height []int) int {
 	maxRight := make([]int, len(height))
 
 	maxLeft[0] = height[0]
-	maxRight[0] = height[len(height)-1]
+	maxRight[len(height)-1] = height[len(height)-1]
 
 	// 记录每个柱子左边柱子最大高度
 	for i := 1; i < len(height)-1; i++ {
