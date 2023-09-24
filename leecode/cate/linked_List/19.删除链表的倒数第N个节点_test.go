@@ -9,6 +9,7 @@ import (
 双指针的经典应用，如果要删除倒数第n个节点，让fast移动n步，然后让fast和slow同时移动，直到fast指向链表末尾。删掉slow所指向的节点就可以了。
 
 */
+
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	dummyHead := &ListNode{
 		Next: head,
@@ -48,6 +49,25 @@ func RemoveNthFromEndV1(head *ListNode, n int) *ListNode {
 	return newHead.Next
 }
 
+func removeNthFromEnd2(head *ListNode, n int) *ListNode {
+	newHead := &ListNode{
+		Val:  0,
+		Next: head,
+	}
+	temp := newHead
+
+	slow, fast := head, head
+	for fast != nil && fast.Next != nil {
+		for i := 0; i < n; i++ {
+			fast = fast.Next
+		}
+		fast = fast.Next
+		slow = slow.Next
+	}
+	slow.Next = slow.Next.Next
+	return temp.Next
+}
+
 func TestRemoveNthFromEndV1(t *testing.T) {
 	a := &ListNode{
 		Val: 1,
@@ -62,7 +82,7 @@ func TestRemoveNthFromEndV1(t *testing.T) {
 			},
 		},
 	}
-	b := RemoveNthFromEndV1(a, 2)
+	b := removeNthFromEnd2(a, 2)
 	for b != nil {
 		fmt.Println("node", b.Val)
 		b = b.Next
