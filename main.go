@@ -1,7 +1,12 @@
 package main
 
-import "go_practice/lib/helper"
+import (
+	"fmt"
+	"go_practice/lib/helper"
+)
 
 func main() {
-	helper.ExcelConvertJson("./包袋属性默认值8.30.xlsx", "1.json")
+	fmt.Println(helper.StringIpToInt("255.255.255.255"))
+	//fmt.Println(helper.IpIntToString(helper.StringIpToInt("255.255.255.255")))
+
 }

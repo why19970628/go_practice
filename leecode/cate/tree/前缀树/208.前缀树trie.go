@@ -1,4 +1,4 @@
-package main
+package 前缀树
 
 type Trie struct {
 	isEnd bool
