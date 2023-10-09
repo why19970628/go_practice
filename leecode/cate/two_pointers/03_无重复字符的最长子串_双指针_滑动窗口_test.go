@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /*
 https://leetcode.cn/problems/longest-substring-without-repeating-characters/
@@ -26,7 +29,7 @@ https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 
 */
 
-func main() {
+func qq() {
 	//f1_暴力法()
 	fmt.Println(lengthOfLongestSubstring("dvdf"))
 }
@@ -66,13 +69,6 @@ func lengthOfLongestSubstring(s string) int {
 	return resp
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 //作者：tangweiqun
 //链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/jian-dan-yi-dong-javac-pythonjshua-dong-bff20/
 //来源：力扣（LeetCode）
@@ -104,4 +100,38 @@ func hasSameStr(s string) bool {
 		m[s[i]] = struct{}{}
 	}
 	return false
+}
+
+// vdavvdddf
+func lengthOfLongestSubstringV2(s string) int {
+	slow := 0
+	fast := 0
+	mp := make(map[byte]int)
+	resp := 0
+	for fast < len(s) {
+		fastVal := s[fast]
+		fast++
+		mp[fastVal]++
+		for mp[fastVal] > 1 {
+			slowVal := s[slow]
+			if _, ok := mp[slowVal]; ok {
+				mp[slowVal]--
+			}
+			slow++
+		}
+		resp = max2(resp, fast-slow)
+	}
+	return resp
+}
+
+func max2(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func TestLengthOfLongestSubstringV2(t *testing.T) {
+	// 3
+	fmt.Println(lengthOfLongestSubstringV2("bacabcbb"))
 }

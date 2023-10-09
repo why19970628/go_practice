@@ -15,7 +15,7 @@ func removeElement(nums []int, val int) int {
 	return endIndex
 }
 
-//相向双指针法
+// 相向双指针法
 func removeElementV2(nums []int, val int) int {
 	// 有点像二分查找的左闭右闭区间 所以下面是<=
 	left := 0
