@@ -68,6 +68,25 @@ func removeNthFromEnd2(head *ListNode, n int) *ListNode {
 	return temp.Next
 }
 
+func removeNthFromEnd3(head *ListNode, n int) *ListNode {
+	newHead := &ListNode{
+		Val:  0,
+		Next: head,
+	}
+	fast := head
+	slow := head
+	for fast != nil && fast.Next != nil {
+		for i := 0; i < n; i++ {
+			fast = fast.Next
+		}
+		fast = fast.Next
+		slow = slow.Next
+	}
+	slow.Next = slow.Next.Next
+	return newHead.Next
+
+}
+
 func TestRemoveNthFromEndV1(t *testing.T) {
 	a := &ListNode{
 		Val: 1,
@@ -82,7 +101,7 @@ func TestRemoveNthFromEndV1(t *testing.T) {
 			},
 		},
 	}
-	b := removeNthFromEnd2(a, 2)
+	b := removeNthFromEnd3(a, 2)
 	for b != nil {
 		fmt.Println("node", b.Val)
 		b = b.Next
@@ -140,9 +159,7 @@ func RemoveNthFromStart(head *ListNode, n int) *ListNode {
 		Val:  0,
 		Next: head,
 	}
-
 	cur := newhead
-
 	count := 0
 	for cur != nil && cur.Next != nil {
 		count++

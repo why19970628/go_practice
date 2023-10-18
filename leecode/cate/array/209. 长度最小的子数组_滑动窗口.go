@@ -45,7 +45,7 @@ func min(a, b int) int {
 	return b
 }
 
-// 滑动窗口!
+// window!
 func minSubArrayLenv2(target int, nums []int) int {
 	left := 0 //左节点
 	n := len(nums)
@@ -67,8 +67,8 @@ func minSubArrayLenv2(target int, nums []int) int {
 
 }
 
-//链接：https://leetcode.cn/problems/minimum-size-subarray-sum/solutions/1959532/biao-ti-xia-biao-zong-suan-cuo-qing-kan-k81nh/
-// 滑动窗口
+// 链接：https://leetcode.cn/problems/minimum-size-subarray-sum/solutions/1959532/biao-ti-xia-biao-zong-suan-cuo-qing-kan-k81nh/
+// window
 func minSubArrayLenV22(target int, nums []int) int {
 	n := len(nums)
 	ans, sum, left := n+1, 0, 0

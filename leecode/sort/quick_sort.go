@@ -96,8 +96,33 @@ func partition(nums []int, l, r int) int {
 	return i                            // pivot index
 }
 
+// 快慢指针
+func quickSortV5(nums []int, l, r int) {
+	if l >= r {
+		return
+	}
+
+	mid := partitionV5(nums, l, r)
+	quickSortV5(nums, l, mid-1)
+	quickSortV5(nums, mid+1, r)
+}
+
+func partitionV5(nums []int, l, r int) int {
+	p := nums[r]
+	i, j := l, l
+	for j < r {
+		if nums[j] < p {
+			nums[i], nums[j] = nums[j], nums[i]
+			i++
+		}
+		j++
+	}
+	nums[i], nums[r] = nums[r], nums[i]
+	return i
+}
+
 func main() {
 	testArr := []int{2, 5, 3, 7, 4, 5, 8, 1, 0, 4}
-	quickSortV3(testArr, 0, len(testArr)-1)
+	quickSortV5(testArr, 0, len(testArr)-1)
 	fmt.Println(testArr)
 }

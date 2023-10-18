@@ -1,12 +1,11 @@
+/*
+Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import (
-	"fmt"
-	"go_practice/lib/helper"
-)
+import "go_practice/cmd"
 
 func main() {
-	fmt.Println(helper.StringIpToInt("255.255.255.255"))
-	//fmt.Println(helper.IpIntToString(helper.StringIpToInt("255.255.255.255")))
-
+	cmd.Execute()
 }

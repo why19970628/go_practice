@@ -49,3 +49,19 @@ func reverseListV2(head *ListNode) *ListNode {
 	}
 	return pre
 }
+
+// pre -> cur -> next
+func reverseListV3(head *ListNode) *ListNode {
+	pre := &ListNode{
+		Val:  0,
+		Next: head,
+	}
+	cur := head
+	for cur != nil {
+		next := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = next
+	}
+	return pre
+}

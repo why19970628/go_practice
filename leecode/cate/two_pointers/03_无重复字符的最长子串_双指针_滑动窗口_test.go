@@ -104,22 +104,24 @@ func hasSameStr(s string) bool {
 
 // vdavvdddf
 func lengthOfLongestSubstringV2(s string) int {
-	slow := 0
-	fast := 0
+	if len(s) == 1 {
+		return 1
+	}
+	l, r := 0, 0
 	mp := make(map[byte]int)
 	resp := 0
-	for fast < len(s) {
-		fastVal := s[fast]
-		fast++
-		mp[fastVal]++
-		for mp[fastVal] > 1 {
-			slowVal := s[slow]
-			if _, ok := mp[slowVal]; ok {
-				mp[slowVal]--
+	for r < len(s) {
+		rVal := s[r]
+		mp[rVal]++
+		r++
+		for mp[rVal] > 1 {
+			lVal := s[l]
+			if _, ok := mp[lVal]; ok {
+				mp[lVal]--
 			}
-			slow++
+			l++
 		}
-		resp = max2(resp, fast-slow)
+		resp = max2(resp, r-l)
 	}
 	return resp
 }
@@ -131,7 +133,26 @@ func max2(a, b int) int {
 	return b
 }
 
+func lengthOfLongestSubstringV3(s string) int {
+	l, r := 0, 0
+	resp := 0
+	mp := make(map[byte]int)
+	for r < len(s) {
+		rVal := s[r]
+		mp[rVal]++
+		r++
+		for mp[rVal] > 1 {
+			if _, ok := mp[s[l]]; ok {
+				mp[s[l]]--
+			}
+			l++
+		}
+		resp = max2(resp, r-l)
+	}
+	return resp
+}
+
 func TestLengthOfLongestSubstringV2(t *testing.T) {
 	// 3
-	fmt.Println(lengthOfLongestSubstringV2("bacabcbb"))
+	fmt.Println(lengthOfLongestSubstringV3("abcabcbb"))
 }

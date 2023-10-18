@@ -32,7 +32,8 @@ func main() {
 }
 
 /*
-   r
+	r
+
 abcadb
 l
 
@@ -73,7 +74,7 @@ func max(a, b int) int {
 	return b
 }
 
-// 2. 滑动窗口
+// 2. window
 // 时间复杂度：O(2n) = O(n)，最坏的情况是 left 和 right 都遍历了一遍字符串
 // 空间复杂度：O(n)
 func lengthOfLongestSubstring2(s string) int {

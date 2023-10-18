@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package example; // 替换为你的包名
+
+//option go_package = "aaa";
+option go_package    = "proto/live";
+
+
+service HelloService {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+    rpc Go (HelloRequest) returns (HelloResponse);
+    rpc To (HelloRequest) returns (HelloResponse);
+
+
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}

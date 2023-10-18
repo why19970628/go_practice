@@ -59,7 +59,7 @@ func minSubArrayLen2(target int, nums []int) int {
 }
 
 // https://leetcode.cn/problems/minimum-size-subarray-sum/solutions/305704/chang-du-zui-xiao-de-zi-shu-zu-by-leetcode-solutio/
-// 滑动窗口
+// window
 func minSubArrayLen3(s int, nums []int) int {
 	n := len(nums)
 	if n == 0 {

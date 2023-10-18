@@ -39,3 +39,5 @@ build/
 go_practice
 *.xlsx
 .DS_Store
+
+goctl/goctl
