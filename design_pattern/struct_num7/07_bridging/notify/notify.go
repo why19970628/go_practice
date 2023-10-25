@@ -36,7 +36,7 @@ type ErrorNotification struct {
 	sender IMsgSender
 }
 
-// NewErrorNotification NewErrorNotification
+// NewErrorNotification
 func NewErrorNotification(sender IMsgSender) *ErrorNotification {
 	return &ErrorNotification{sender: sender}
 }

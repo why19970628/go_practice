@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package mypackage;
+
+option go_package = "./"; // 生成的go文件的包名
+
+
+message MyMessage {
+  string name = 1;
+  int32 age = 2;
+}
