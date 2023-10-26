@@ -28,14 +28,11 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.14.3
 	github.com/haisum/rpcexample v0.0.0-20151013205443-7d034ca95162
 	github.com/jasonlvhit/gocron v0.0.1
-	github.com/jinzhu/gorm v1.9.16
-	github.com/jinzhu/now v1.1.1 // indirect
 	github.com/juju/ratelimit v1.0.1
 	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/olivere/elastic v6.2.35+incompatible
 	github.com/olivere/elastic/v7 v7.0.21
 	github.com/opentracing/opentracing-go v1.2.0
-	github.com/pkg/errors v0.9.1
 	github.com/robfig/cron v1.2.0
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.6.0
@@ -54,4 +51,6 @@ require (
 	google.golang.org/protobuf v1.26.0
 	gopkg.in/ffmt.v1 v1.5.6
 	gopkg.in/ini.v1 v1.51.0
+	gorm.io/driver/sqlite v1.5.4
+	gorm.io/gorm v1.25.5
 )

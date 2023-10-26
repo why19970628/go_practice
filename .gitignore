@@ -41,3 +41,4 @@ go_practice
 .DS_Store
 
 goctl/goctl
+*.db

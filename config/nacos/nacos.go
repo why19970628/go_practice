@@ -1,4 +1,4 @@
-package main
+package nacos
 
 import (
 	"encoding/json"
@@ -18,7 +18,7 @@ type NacOsServerConfig struct {
 	Port        uint64 `json:"port"`         //the nacos server port
 }
 
-//GetConfigJsonToEntity 配置文件是json的话直接读取成实体
+// GetConfigJsonToEntity 配置文件是json的话直接读取成实体
 func (n *NacOsServerConfig) GetConfigJsonToEntity(dataId, group string, resp interface{}) error {
 	c, err := n.GetConfig(dataId, group)
 	if err != nil {
@@ -72,8 +72,8 @@ func (n *NacOsServerConfig) GetConfig(dataId, group string) (string, error) {
 
 var serverConfig *ServerConfig
 
-//ConfigByNacOS 通过nacos做配置中心获取config
-//github.com/nacos-group/nacos-sdk-go
+// ConfigByNacOS 通过nacos做配置中心获取config
+// github.com/nacos-group/nacos-sdk-go
 func main() {
 	t := NewNacOsServerConfig("127.0.0.1", "/nacos", 8848)
 
@@ -125,7 +125,7 @@ type NacosInit struct {
 }
 
 type ServerConfig struct {
-	MySQL               MySQLConfig  `mapstructure:"mysql" json:"mysql"`
+	MySQL               MySQLConfig  `mapstructure:"sqlx" json:"sqlx"`
 	Redis               RedisConfig  `mapstructure:"redis" json:"redis"`
 	Rabbit              RabbitConfig `mapstructure:"rabbit" json:"rabbit"`
 	UploadServicePort   int          `mapstructure:"uploadservice" json:"uploadservice"`
