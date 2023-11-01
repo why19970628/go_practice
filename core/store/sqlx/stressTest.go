@@ -6,31 +6,29 @@ import (
 	"gorm.io/gorm"
 )
 
-var (
-	stressKey   = "P_STRESS"
-	stressValue = "true"
-	tableSuffix = "_stress"
-)
-
 type (
 	StressTest        struct{ opt *StressTestOptions }
 	Option            func(opt *StressTestOptions)
 	StressTestOptions struct{ stressKey, stressValue, tableSuffix string }
 )
 
+var StressMp = map[string]any{}
+
 func NewStressTest(opts ...Option) *StressTest {
 	o := &StressTestOptions{
-		stressKey:   stressKey,
-		stressValue: stressValue,
-		tableSuffix: tableSuffix,
+		stressKey:   "GO_STRESS",
+		stressValue: "true",
+		tableSuffix: "_stress",
 	}
 	for _, opt := range opts {
 		opt(o)
 	}
-	stressKey = o.stressKey
-	stressValue = o.stressValue
-	tableSuffix = o.tableSuffix
+
 	return &StressTest{opt: o}
+}
+
+func (s *StressTest) Register() {
+	StressMp[s.GetStressKey()] = s.GetStressValue()
 }
 
 func (s *StressTest) SetStressContext(ctx context.Context) context.Context {
@@ -67,14 +65,16 @@ func (s *StressTest) GetStressValue() string {
 }
 
 // IsPreviewRequest 判断是否是压测请求
-func IsPreviewRequest(ctx context.Context) bool {
-	if value := ctx.Value(stressKey); value != nil {
-		return value.(string) == stressValue
+func (s *StressTest) IsPreviewRequest(ctx context.Context) bool {
+	if value := ctx.Value(s.GetStressKey()); value != nil {
+		return value.(string) == s.GetStressValue()
 	}
 	return false
 }
+
 func AddGormStressSuffix(db *gorm.DB) {
-	if IsPreviewRequest(db.Statement.Context) {
-		db.Statement.Table = fmt.Sprintf("%s%s", db.Statement.Table, tableSuffix)
+	st := NewStressTest()
+	if st.IsPreviewRequest(db.Statement.Context) {
+		db.Statement.Table = fmt.Sprintf("%s%s", db.Statement.Table, st.GetTableSuffix())
 	}
 }

@@ -21,7 +21,11 @@ func TestAddStressSuffixTest(t *testing.T) {
 	}
 
 	// 注册 Hooks 钩子函数以修改 SQL 语句
-	db.Callback().Create().Before("gorm:before_create").Register("add_stress_suffix", AddGormStressSuffix)
+	err = db.Callback().Create().Before("gorm:before_create").Register("add_stress_suffix", AddGormStressSuffix)
+	if err != nil {
+		panic(err)
+		return
+	}
 
 	// 在需要进行压测的地方，设置压测标识
 	st := NewStressTest(
