@@ -1,4 +1,4 @@
-package helper
+package threading
 
 import "sync"
 
@@ -12,9 +12,11 @@ func NewWorker(workerNum int) *Pool {
 		work: make(chan func()),
 	}
 	p.wg.Add(workerNum)
+	//group := NewRoutineGroup()
 	for i := 0; i < workerNum; i++ {
 		go func() {
 			for w := range p.work {
+				//group.RunSafe(w)
 				w()
 			}
 			p.wg.Done()
@@ -31,20 +33,4 @@ func (p *Pool) Add(w func()) {
 func (p *Pool) ShutDown() {
 	close(p.work)
 	p.wg.Wait()
-}
-
-func RunMultiFunc(funcs []func()) {
-	num := len(funcs)
-	if num <= 0 {
-		return
-	}
-	var wg sync.WaitGroup
-	wg.Add(num)
-	for i := 0; i < num; i++ {
-		go func(index int) {
-			funcs[index]()
-			wg.Done()
-		}(i)
-	}
-	wg.Wait()
 }

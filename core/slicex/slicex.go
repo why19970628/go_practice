@@ -1,4 +1,4 @@
-package base
+package slicex
 
 import "reflect"
 
@@ -14,4 +14,19 @@ func InArrayMixed(val any, array any) bool {
 		}
 	}
 	return false
+}
+
+// ChunkSlice 切片分块
+func ChunkSlice[T any](slice []T, chunkSize int) [][]T {
+	var result [][]T
+
+	for i := 0; i < len(slice); i += chunkSize {
+		end := i + chunkSize
+		if end > len(slice) {
+			end = len(slice)
+		}
+		result = append(result, slice[i:end])
+	}
+
+	return result
 }
