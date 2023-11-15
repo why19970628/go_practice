@@ -23,6 +23,7 @@ require (
 	github.com/haisum/rpcexample v0.0.0-20151013205443-7d034ca95162
 	github.com/jasonlvhit/gocron v0.0.1
 	github.com/juju/ratelimit v1.0.1
+	github.com/looplab/fsm v1.0.1
 	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/olivere/elastic v6.2.35+incompatible
 	github.com/olivere/elastic/v7 v7.0.21

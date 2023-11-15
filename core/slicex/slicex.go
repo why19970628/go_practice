@@ -30,3 +30,17 @@ func ChunkSlice[T any](slice []T, chunkSize int) [][]T {
 
 	return result
 }
+
+func RemoveElement[T int | int8 | int32 | int16 | int64 | string](slice []T, element T) []T {
+	if len(slice) == 0 {
+		return []T{}
+	}
+	for i := 0; i < len(slice); i++ {
+		if slice[i] == element {
+			slice = append(slice[:i], slice[i+1:]...)
+			i--
+		}
+	}
+	return slice
+
+}

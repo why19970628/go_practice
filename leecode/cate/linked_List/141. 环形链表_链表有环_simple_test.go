@@ -1,4 +1,4 @@
-package linked_List
+package main
 
 /*
 

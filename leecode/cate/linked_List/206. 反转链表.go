@@ -1,4 +1,4 @@
-package linked_List
+package main
 
 /**
  * Definition for singly-linked list.
@@ -11,7 +11,7 @@ package linked_List
 pre->cur->temp
 */
 
-//双指针
+// 双指针
 func reverseList(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head
