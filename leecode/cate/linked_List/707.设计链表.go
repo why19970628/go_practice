@@ -1,4 +1,4 @@
-package main
+package linked_List
 
 type SingleNode struct {
 	Next *SingleNode

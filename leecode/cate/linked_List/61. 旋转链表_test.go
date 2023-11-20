@@ -1,6 +1,9 @@
-package main
+package linked_List
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /*
 https://leetcode.cn/problems/rotate-list/
@@ -65,6 +68,29 @@ func rotateLinkedList(head *ListNode, k int) *ListNode {
 
 }
 
+// 1->2->3->4->5, k=2则返回链表 4->5->1->2->3
+func rotateLinkedListV3(head *ListNode, k int) *ListNode {
+	length := getLength(head)
+	if k == 0 || length%k == 0 {
+		return head
+	}
+	k = k % length
+
+	slow, fast := head, head
+	for i := 0; i < k; i++ {
+		fast = fast.Next
+	}
+	for fast.Next != nil {
+		fast = fast.Next
+		slow = slow.Next
+	}
+	newHead := slow.Next
+	slow.Next = nil
+	fast.Next = head
+	return newHead
+
+}
+
 // 获取链表长度
 func getLength(head *ListNode) int {
 	length := 0
@@ -86,7 +112,7 @@ func printList(head *ListNode) {
 	fmt.Println()
 }
 
-func main() {
+func TestRotateLinkedListV3(t *testing.T) {
 	// 创建一个链表: 1->2->3->4->5
 	head := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
 
@@ -94,8 +120,8 @@ func main() {
 	printList(head)
 
 	// 旋转链表
-	k := 2
-	newHead := rotateLinkedList(head, k)
+	k := 5
+	newHead := rotateLinkedListV3(head, k)
 
 	fmt.Printf("Rotated List (k=%d):\n", k)
 	printList(newHead)

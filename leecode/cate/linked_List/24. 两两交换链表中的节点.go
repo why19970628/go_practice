@@ -1,4 +1,4 @@
-package main
+package linked_List
 
 func swapPairs(head *ListNode) *ListNode {
 	dummyHead := &ListNode{

@@ -1,4 +1,4 @@
-package main
+package linked_List
 
 /*
 https://leetcode.cn/problems/middle-of-the-linked-list/
