@@ -25,25 +25,6 @@ func RemoveElement(node *ListNode, val int) *ListNode {
 	return head.Next
 }
 
-func RemoveElementV2(node *ListNode, val int) *ListNode {
-	head := &ListNode{
-		Val:  0,
-		Next: node,
-	}
-
-	cur := head
-	for cur != nil {
-		if cur.Next != nil {
-			if cur.Next.Val == val {
-				cur.Next = cur.Next.Next
-			}
-		}
-		cur = cur.Next
-
-	}
-	return head.Next
-}
-
 func RemoveElementV3(node *ListNode, val int) *ListNode {
 	newNode := &ListNode{
 		Val:  0,
@@ -61,6 +42,21 @@ func RemoveElementV3(node *ListNode, val int) *ListNode {
 	return temp.Next
 }
 
+func RemoveElementV4(node *ListNode, val int) *ListNode {
+	newHead := &ListNode{
+		Val:  0,
+		Next: node,
+	}
+	for newHead.Next != nil {
+		if newHead.Next.Val == val {
+			newHead.Next = newHead.Next.Next
+		} else {
+			newHead = newHead.Next
+		}
+	}
+	return node
+}
+
 func TestRemoveElements(t *testing.T) {
 	a := &ListNode{
 		Val: 1,
@@ -72,7 +68,7 @@ func TestRemoveElements(t *testing.T) {
 			},
 		},
 	}
-	b := RemoveElementV3(a, 5)
+	b := RemoveElementV4(a, 5)
 	fmt.Println(b.Val)
 	fmt.Println(b.Next.Val)
 }
