@@ -16,16 +16,6 @@ func middleNode143(head *ListNode) *ListNode {
 }
 
 // 206. 反转链表
-func reverseList143(head *ListNode) *ListNode {
-	var pre, cur *ListNode = nil, head
-	for cur != nil {
-		nxt := cur.Next
-		cur.Next = pre
-		pre = cur
-		cur = nxt
-	}
-	return pre
-}
 
 func reorderList(head *ListNode) {
 	mid := middleNode143(head)
