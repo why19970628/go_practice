@@ -102,16 +102,6 @@ func getLength(head *ListNode) int {
 	return length
 }
 
-// 打印链表
-func printList(head *ListNode) {
-	current := head
-	for current != nil {
-		fmt.Print(current.Val, " ")
-		current = current.Next
-	}
-	fmt.Println()
-}
-
 func TestRotateLinkedListV3(t *testing.T) {
 	// 创建一个链表: 1->2->3->4->5
 	head := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
