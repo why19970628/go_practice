@@ -29,46 +29,6 @@ https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 
 */
 
-func qq() {
-	//f1_暴力法()
-	fmt.Println(lengthOfLongestSubstring("dvdf"))
-}
-
-/*
-   r
-abcadb
-l
-
-a 1
-b 1
-c 1
-*/
-func lengthOfLongestSubstring(s string) int {
-	resp := 0
-	left, right := 0, 0
-	mp := make(map[byte]int)
-
-	for right < len(s) {
-		r := s[right]
-		mp[r]++
-		right++
-
-		// 重新组合非重复字符串
-		for mp[r] > 1 {
-			//移动左指针
-			l := s[left]
-			if _, ok := mp[l]; ok {
-				mp[l]--
-			}
-			left++
-		}
-
-		resp = max(resp, right-left)
-	}
-
-	return resp
-}
-
 //作者：tangweiqun
 //链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/jian-dan-yi-dong-javac-pythonjshua-dong-bff20/
 //来源：力扣（LeetCode）
@@ -102,37 +62,6 @@ func hasSameStr(s string) bool {
 	return false
 }
 
-// vdavvdddf
-func lengthOfLongestSubstringV2(s string) int {
-	if len(s) == 1 {
-		return 1
-	}
-	l, r := 0, 0
-	mp := make(map[byte]int)
-	resp := 0
-	for r < len(s) {
-		rVal := s[r]
-		mp[rVal]++
-		r++
-		for mp[rVal] > 1 {
-			lVal := s[l]
-			if _, ok := mp[lVal]; ok {
-				mp[lVal]--
-			}
-			l++
-		}
-		resp = max2(resp, r-l)
-	}
-	return resp
-}
-
-func max2(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lengthOfLongestSubstringV3(s string) int {
 	l, r := 0, 0
 	resp := 0
@@ -152,7 +81,36 @@ func lengthOfLongestSubstringV3(s string) int {
 	return resp
 }
 
+func lengthOfLongestSubstringV4(s string) int {
+	if len(s) <= 1 {
+		return len(s)
+	}
+	l, r := 0, 0
+	resp := 0
+	mp := make(map[byte]int)
+	for r < len(s) {
+		rv := s[r]
+		mp[rv]++
+		r++
+		for mp[rv] > 1 {
+			if _, ok := mp[s[l]]; ok {
+				mp[s[l]]--
+			}
+			l++
+		}
+		resp = max2(resp, r-l)
+	}
+	fmt.Println("resp", resp)
+	return resp
+}
+
+func max2(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
 func TestLengthOfLongestSubstringV2(t *testing.T) {
 	// 3
-	fmt.Println(lengthOfLongestSubstringV3("abcabcbb"))
+	fmt.Println(lengthOfLongestSubstringV4("au"))
 }

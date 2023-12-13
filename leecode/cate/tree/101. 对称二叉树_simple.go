@@ -37,26 +37,50 @@ func dfs(left *TreeNode, right *TreeNode) bool {
 //	return dfs(left.Left, right.Right) && dfs(left.Right, right.Left)
 //}
 
-// 迭代
 func isSymmetricV2(root *TreeNode) bool {
-	var queue []*TreeNode
-	if root != nil {
-		queue = append(queue, root.Left, root.Right)
+	if root == nil {
+		return true
 	}
-	for len(queue) > 0 {
-		left := queue[0]
-		right := queue[1]
-		queue = queue[2:]
-		if left == nil && right == nil {
-			continue
+	return isSymmetricDfs(root.Left, root.Right)
+}
+
+func isSymmetricDfs(left, right *TreeNode) bool {
+	if left == nil && right == nil {
+		return true
+	}
+	if left == nil || right == nil {
+		return false
+	}
+	if left.Val != right.Val {
+		return false
+	}
+	return isSymmetricDfs(left.Left, right.Right) && isSymmetricDfs(left.Right, right.Left)
+}
+
+// 层序遍历
+func isSymmetricBFS(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+	var quene []*TreeNode
+	quene = append(quene, root.Left, root.Right)
+	for len(quene) > 0 {
+		n := len(quene)
+		for i := 0; i < n/2; i++ {
+			left := quene[0]
+			right := quene[1]
+			quene = quene[2:]
+			if left == nil && right == nil {
+				continue
+			}
+			if left == nil || right == nil {
+				return false
+			}
+			if left.Val != right.Val {
+				return false
+			}
+			quene = append(quene, left.Left, right.Right, left.Right, right.Left)
 		}
-		if left == nil || right == nil {
-			return false
-		}
-		if left.Val != right.Val {
-			return false
-		}
-		queue = append(queue, left.Left, right.Right, left.Right, right.Left)
 	}
 	return true
 }

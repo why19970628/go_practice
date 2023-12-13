@@ -16,6 +16,17 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 
+func twoSumV2(nums []int, target int) []int {
+	mp := make(map[int]int, 0)
+	for i := 0; i < len(nums); i++ {
+		if v, ok := mp[target-nums[i]]; ok {
+			return []int{v, i}
+		}
+		mp[nums[i]] = i
+	}
+	return []int{}
+}
+
 func main() {
 	nums := []int{2, 7, 11, 15}
 	target := 9

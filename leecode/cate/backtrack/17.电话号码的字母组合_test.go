@@ -39,6 +39,44 @@ func letterCombinationsDfs(digits string, currIndex int) {
 	}
 }
 
+func letterCombinationsV2(digits string) []string {
+	if len(digits) == 0 {
+		return []string{}
+	}
+
+	mp = make(map[byte]string)
+	arrResp = make([]string, 0)
+	mp['2'] = "abc"
+	mp['3'] = "def"
+	mp['4'] = "ghi"
+	mp['5'] = "jkl"
+	mp['6'] = "mno"
+	mp['7'] = "pqrs"
+	mp['8'] = "tuv"
+	mp['9'] = "wxyz"
+	letterCombinationsV2Dfs(digits, 0)
+	return arrResp
+}
+
+var (
+	arrResp []string
+	temp    []byte
+)
+
+func letterCombinationsV2Dfs(digits string, start int) {
+	if len(temp) > 0 && len(temp) == len(digits) {
+		arrResp = append(arrResp, string(temp))
+		return
+	}
+	str := mp[digits[start]]
+	// abc
+	for j := 0; j < len(str); j++ {
+		temp = append(temp, str[j])
+		letterCombinationsV2Dfs(digits, start+1)
+		temp = temp[:len(temp)-1]
+	}
+}
+
 func TestLetterCombinations(t *testing.T) {
-	fmt.Println(letterCombinations("2"))
+	fmt.Println(letterCombinationsV2("2"))
 }

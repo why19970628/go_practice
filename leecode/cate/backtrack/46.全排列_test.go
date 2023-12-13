@@ -33,23 +33,41 @@ func permuteDfs(nums []int, cur int) {
 	}
 }
 
-//func permuteDfs(nums []int, cur int) {
-//	if cur == len(nums) {
-//		tmp := make([]int, len(path))
-//		copy(tmp, path)
-//		res = append(res, tmp)
-//	}
-//	for i := 0; i < len(nums); i++ {
-//		if !st[i] {
-//			path = append(path, nums[i])
-//			st[i] = true
-//			permuteDfs(nums, cur+1)
-//			st[i] = false
-//			path = path[:len(path)-1]
-//		}
-//	}
-//}
+var (
+	resp46 [][]int
+	temp46 []int
+	mp2    = make(map[int]bool)
+)
+
+func permuteV2(nums []int) [][]int {
+	resp46 = make([][]int, 0)
+	mp2 = make(map[int]bool, len(nums))
+	permuteV2DFS(nums, 0)
+	return resp46
+}
+
+func permuteV2DFS(nums []int, start int) {
+	if len(temp46) == len(nums) {
+		t := make([]int, len(nums))
+		copy(t, temp46)
+		resp46 = append(resp46, t)
+		return
+	}
+	for i := 0; i < len(nums); i++ {
+		//if i == start {
+		//	continue
+		//}
+
+		if val, ok := mp2[nums[i]]; !ok || val == false {
+			mp2[nums[i]] = true
+			temp46 = append(temp46, nums[i])
+			permuteV2DFS(nums, i)
+			temp46 = temp46[:len(temp46)-1]
+			mp2[nums[i]] = false
+		}
+	}
+}
 
 func TestPermute(t *testing.T) {
-	fmt.Println(permute([]int{4, 6, 7}))
+	fmt.Println(permuteV2([]int{1, 2, 3}))
 }

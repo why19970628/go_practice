@@ -50,18 +50,22 @@ func maxSubArrayV2(nums []int) int {
 	return resp
 }
 
-// 暴力解法的思路，第一层 for 就是设置起始位置，第二层 for 循环遍历数组寻找最大值
-func maxSubArray(nums []int) int {
-	resp := -math.MaxInt32
-	for i := 0; i < len(nums); i++ {
-		temp := 0
-		for j := i + 1; j < len(nums); j++ {
-			temp += nums[j]
-			if temp > resp {
-				resp = temp
-			}
-		}
-	}
+/*
+输入: [-2,1,-3,4,-1,2,1,-5,4]
+输出: 6
+解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
 
+1, dp
+2, 贪心
+*/
+func maxSubArray(nums []int) int {
+	n := len(nums)
+	dp := make([]int, n)
+	dp[0] = nums[0]
+	resp := nums[0]
+	for i := 1; i < n; i++ {
+		dp[i] = max(nums[i], dp[i-1]+nums[i])
+		resp = max(resp, dp[i])
+	}
 	return resp
 }

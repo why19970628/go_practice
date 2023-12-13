@@ -27,7 +27,7 @@ func moveZeroes(nums []int) {
 	slow := 0
 	fast := 1
 	for slow < fast && fast < len(nums) {
-		for nums[slow] == 0 && nums[fast] != 0 {
+		if nums[slow] == 0 && nums[fast] != 0 {
 			nums[slow], nums[fast] = nums[fast], nums[slow]
 		}
 		if nums[slow] != 0 {
@@ -38,8 +38,49 @@ func moveZeroes(nums []int) {
 
 }
 
+// 输入: nums = [0,1,0,3,12]
+func moveZeroesV2(nums []int) {
+	slow, fast := 0, 1
+	for slow < fast && fast < len(nums) {
+		if nums[slow] == 0 && nums[fast] != 0 {
+			nums[slow], nums[fast] = nums[fast], nums[slow]
+		}
+		if nums[slow] != 0 {
+			slow++
+		}
+		fast++
+	}
+}
+
+// 输入: nums = [0,1,0,3,12]
+func moveZeroesV3(nums []int) {
+	slow, fast := 0, 1
+	for slow < fast && fast < len(nums) {
+		if nums[slow] == 0 && nums[fast] != 0 {
+			nums[slow], nums[fast] = nums[fast], nums[slow]
+		}
+		if nums[slow] != 0 {
+			slow++
+		}
+		fast++
+	}
+}
+
+func MoveTargetToFront(nums []int, target int) {
+	slow, fast := 0, 1
+	for slow < fast && fast < len(nums) {
+		if nums[fast] == target && nums[slow] != target {
+			nums[slow], nums[fast] = nums[fast], nums[slow]
+		}
+		if nums[slow] == target {
+			slow++
+		}
+		fast++
+	}
+}
+
 func main() {
 	nums := []int{0, 1, 0, 3, 12}
-	moveZeroes(nums)
+	moveZeroesV2(nums)
 	fmt.Println(nums)
 }

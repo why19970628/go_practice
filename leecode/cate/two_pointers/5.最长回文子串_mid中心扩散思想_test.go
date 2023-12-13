@@ -35,24 +35,25 @@ func max1(a, b, c string) string {
 	return resp
 }
 
-func MaxSubHuiWenV2(s string) string {
+func longestPalindrome(s string) string {
 	resp := ""
 	for i := 0; i < len(s); i++ {
-		a := expandV2(i, i, s)
-		b := expandV2(i, i+1, s)
-		resp = max1(a, b, resp)
+		s1 := expandV1(i, i, s)
+		s2 := expandV1(i, i+1, s)
+		fmt.Println(i, s1, s2)
+		resp = max1(s1, s2, s)
 	}
 	return resp
 }
 
-func expandV2(i, j int, s string) string {
-	for i >= 0 && j < len(s) && s[i] == s[j] {
-		i--
-		j++
+func expandV1(l, r int, s string) string {
+	for l >= 0 && r < len(s) && s[l] == s[r] {
+		l--
+		r++
 	}
-	return s[i+1 : j]
+	return s[l+1 : r]
 }
 
 func TestMaxSubHuiWen(t *testing.T) {
-	fmt.Println(MaxSubHuiWenV2("12345654321"))
+	fmt.Println(longestPalindrome("12345654321"))
 }

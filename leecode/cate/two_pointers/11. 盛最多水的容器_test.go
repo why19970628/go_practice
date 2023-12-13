@@ -36,6 +36,21 @@ func max(a, b int) int {
 	return a
 }
 
+func maxAreaV2(height []int) int {
+	ans := 0
+	l, r := 0, len(height)-1
+	for l < r {
+		area := (r - l) * min(height[l], height[r])
+		ans = max(ans, area)
+		if height[l] < height[r] {
+			l++
+		} else {
+			r++
+		}
+	}
+	return ans
+}
+
 func TestSearchRange(t *testing.T) {
 	fmt.Println(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
 }

@@ -24,7 +24,7 @@ func hasPathSumV2(root *TreeNode, targetSum int) bool {
 		return false
 	}
 	quene := []*TreeNode{root}
-	if len(quene) > 0 {
+	for len(quene) > 0 {
 		node := quene[0]
 		quene = quene[1:]
 		if node.Left == nil && node.Right == nil && node.Val == targetSum {
@@ -41,6 +41,14 @@ func hasPathSumV2(root *TreeNode, targetSum int) bool {
 
 	}
 	return false
+}
+
+func hasPathSumDFS(root *TreeNode, targetSum int) bool {
+	targetSum -= root.Val // 将targetSum在遍历每层的时候都减去本层节点的值
+	if targetSum == 0 && root.Left == nil && root.Right == nil {
+		return true
+	}
+	return hasPathSumDFS(root.Left, targetSum) || hasPathSumDFS(root.Right, targetSum)
 }
 
 //

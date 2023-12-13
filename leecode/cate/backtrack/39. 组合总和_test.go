@@ -35,6 +35,35 @@ func dfscombinationSum(candidates []int, start, target int) {
 	}
 }
 
+var (
+	resp39 [][]int
+	temp39 []int
+)
+
+func combinationSumV2(candidates []int, target int) [][]int {
+	sort.Ints(candidates)
+	resp39 = make([][]int, 0)
+	combinationSumV2DFS(candidates, 0, target)
+	return resp39
+}
+
+func combinationSumV2DFS(candidates []int, start, target int) {
+	if target == 0 {
+		t := make([]int, len(temp39))
+		copy(t, temp39)
+		resp39 = append(resp39, t)
+		return
+	}
+	for i := start; i < len(candidates); i++ {
+		if candidates[start] > target {
+			break
+		}
+		temp39 = append(temp39, candidates[i])
+		combinationSumV2DFS(candidates, i, target-candidates[i])
+		temp39 = temp39[:len(temp39)-1]
+	}
+}
+
 func TestCombinationSum(t *testing.T) {
-	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
+	fmt.Println(combinationSumV2([]int{2, 3, 6, 7}, 7))
 }
