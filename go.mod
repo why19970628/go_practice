@@ -23,6 +23,7 @@ require (
 	github.com/haisum/rpcexample v0.0.0-20151013205443-7d034ca95162
 	github.com/jasonlvhit/gocron v0.0.1
 	github.com/juju/ratelimit v1.0.1
+	github.com/lafikl/consistent v0.0.0-20220512074542-bdd3606bfc3e
 	github.com/looplab/fsm v1.0.1
 	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/olivere/elastic v6.2.35+incompatible
@@ -32,6 +33,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.6.0
 	github.com/spf13/cobra v1.7.0
+	github.com/starwander/GoFibonacciHeap v0.0.0-20190508061137-ba2e4f01000a
 	github.com/stretchr/testify v1.8.4
 	github.com/tealeg/xlsx v1.0.5
 	github.com/uber/jaeger-client-go v2.27.0+incompatible
@@ -89,6 +91,7 @@ require (
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/mattn/go-sqlite3 v1.14.17 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
+	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

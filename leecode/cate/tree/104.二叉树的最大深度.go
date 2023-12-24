@@ -16,25 +16,48 @@ func maxDepth(root *TreeNode) int {
 }
 
 // 层序遍历
-func maxDepthV2(root *TreeNode) int {
+func maxDepthBFS(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
 	levl := 0
 	queue := make([]*TreeNode, 0)
 	if root != nil {
 		queue = append(queue, root)
 	}
 	for len(queue) > 0 {
-		tempArr := make([]*TreeNode, 0)
-		for i := 0; i < len(queue); i++ {
-			node := queue[i]
+		n := len(queue)
+		for i := 0; i < n; i++ {
+			node := queue[0]
+			queue = queue[1:]
 			if node.Left != nil {
-				tempArr = append(tempArr, node.Left)
+				queue = append(queue, node.Left)
 			}
 			if node.Right != nil {
-				tempArr = append(tempArr, node.Right)
+				queue = append(queue, node.Right)
 			}
 		}
 		levl++
-		queue = tempArr
 	}
 	return levl
+}
+
+func maxDepthDFS(root *TreeNode) (resp int) {
+	if root == nil {
+		return
+	}
+	var dfs func(node *TreeNode, cur int) int
+	cur := 0
+	dfs = func(node *TreeNode, cur int) int {
+		if node == nil {
+			return 0
+		}
+		cur++
+		resp = max(resp, cur)
+		dfs(node.Left, cur)
+		dfs(node.Right, cur)
+		return resp
+	}
+	dfs(root, cur)
+	return
 }
