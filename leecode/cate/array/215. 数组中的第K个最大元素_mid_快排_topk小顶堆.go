@@ -60,7 +60,7 @@ func findKthLargest_Heap(nums []int, k int) int {
 
 // 以上 也可以每次先Push，然后在判断长度是否大于K，大于K时再Pop，这样是利用堆的自调整特性保证长度为K
 // 不过调整次数比增加
-// 小顶堆
+// 堆排序 小顶堆
 type iheap []int
 
 // 实现 Sort 接口的Len, Less, Swap方法
@@ -69,23 +69,25 @@ func (h iheap) Less(i, j int) bool { return h[i] < h[j] }
 func (h iheap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
 // 看一下堆顶元素，不调整
+
 func (h iheap) Peek() int {
 	return h[0]
 }
 
 // 实现 container/Heap 接口的Pop,Push方法，receiver需要是指针
+// 直接修改原始切片： 通过指针，*h 表示原始 jheap 类型的切片，而不是它的副本。这意味着，Push 方法内的任何修改都会影响调用该方法的原始 jheap 变量。
 func (h *iheap) Push(x interface{}) {
 	*h = append(*h, x.(int))
 }
 
 // 弹出数组最后一个元素，同时数组长度--，堆内部通过替换堆顶元素来进行 heapifyDown 调整
+
 func (h *iheap) Pop() interface{} {
 	n := (*h).Len()
 	x := (*h)[n-1]  // 数组最后一个元素
 	*h = (*h)[:n-1] // size--
 	return x
 }
-
 func main() {
-	fmt.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2))
+	fmt.Println(findKthLargest_Heap([]int{3, 2, 1, 5, 6, 4}, 2))
 }

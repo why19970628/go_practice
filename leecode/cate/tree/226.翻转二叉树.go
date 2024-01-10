@@ -1,6 +1,6 @@
 package main
 
-/// 递归版本的前序遍历
+// / 递归版本的前序遍历
 func invertTree(root *TreeNode) *TreeNode {
 	if root == nil {
 		return root
@@ -35,7 +35,10 @@ func invertTree3(root *TreeNode) *TreeNode {
 }
 
 // 层序遍历 把放入切片前，把左右两边指针交换位置即可
-func invertTree4(root *TreeNode) *TreeNode {
+func invertTree_BFS(root *TreeNode) *TreeNode {
+	if root == nil {
+		return root
+	}
 	curLevel := []*TreeNode{root}
 	for len(curLevel) > 0 {
 		var newArr []*TreeNode
@@ -49,6 +52,25 @@ func invertTree4(root *TreeNode) *TreeNode {
 			}
 		}
 		curLevel = newArr
+	}
+	return root
+}
+
+func invertTree_BFS2(root *TreeNode) *TreeNode {
+	if root == nil {
+		return root
+	}
+	curLevel := []*TreeNode{root}
+	for len(curLevel) > 0 {
+		v := curLevel[0]
+		curLevel = curLevel[1:]
+		if v.Left != nil {
+			curLevel = append(curLevel, v.Left)
+		}
+		if v.Right != nil {
+			curLevel = append(curLevel, v.Right)
+		}
+		v.Left, v.Right = v.Right, v.Left
 	}
 	return root
 }

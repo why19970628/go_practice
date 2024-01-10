@@ -34,6 +34,35 @@ func max(numList []int) int {
 	return maxNum
 }
 
+/*
+单调队列套路
+入（元素进入队尾，同时维护队列单调性）
+出（元素离开队首）
+记录/维护答案（根据队首）
+*/
+func maxSlidingWindow_(nums []int, k int) []int {
+	resp := make([]int, 0, len(nums)-k+1)
+	stack := make([]int, 0)
+	for i, v := range nums {
+		// 维护 q 的单调性
+		for len(stack) > 0 && nums[stack[len(stack)-1]] <= v {
+			stack = stack[:len(stack)-1]
+		}
+		stack = append(stack, i)
+		// 队首已经离开窗口了
+		if i-stack[0] >= k {
+			stack = stack[1:]
+		}
+
+		// k= 3,在i=2时添加数据
+		if i >= k-1 {
+			// 由于队首到队尾单调递减，所以窗口最大值就是队首
+			resp = append(resp, nums[stack[0]])
+		}
+	}
+	return resp
+}
+
 // 优先队列  大顶堆-------------------------------------------------------
 var a []int
 
