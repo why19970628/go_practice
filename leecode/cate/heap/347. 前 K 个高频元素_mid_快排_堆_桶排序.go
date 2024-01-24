@@ -191,10 +191,10 @@ func topKFrequent_heapSort(nums []int, k int) []int {
 	for key, value := range frequence {
 		heap.Push(h, &Item{Num: key, Count: value})
 		// 所以每次元素超过K个了，就出队列，避免冗余计算
-		//if h.Len() > k {
-		//	// 因为是小顶堆，所以能确保出现频率高的k个不会被出队
-		//	heap.Pop(h)
-		//}
+		if h.Len() > k {
+			// 因为是小顶堆，所以能确保出现频率高的k个不会被出队
+			heap.Pop(h)
+		}
 	}
 	for _, item := range *h {
 		fmt.Println(item)
@@ -203,13 +203,14 @@ func topKFrequent_heapSort(nums []int, k int) []int {
 	res := make([]int, k)
 	for i := 0; i < k; i++ {
 		// 当前队列里面就保存的k个频率最高的元素，题目没有要求按照什么顺序排列，所以直接赋值
-		res[i] = heap.Pop(h).(*Item).Num
 		// 如果较真一些，按照出现频率从大到小来排列（即倒序），就可以写成
-		// res[k-i-1] = heap.Pop(h).(*Item).Num
+		res[k-i-1] = heap.Pop(h).(*Item).Num
 	}
 	return res
 }
 
 func main() {
-	fmt.Println(topKFrequent_heapSort([]int{1, 3, 4, 4, 3, 3, 2}, 2))
+	//fmt.Println(topKFrequent_heapSort([]int{1, 3, 4, 4, 3, 3, 2}, 2))
+	fmt.Println(topKFrequent_heapSort([]int{1, 1, 1, 2, 2, 3}, 2)) // [1,2]
+
 }

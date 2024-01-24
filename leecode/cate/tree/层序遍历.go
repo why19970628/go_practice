@@ -2,7 +2,8 @@ package main
 
 import "container/list"
 
-/**
+/*
+*
 102. 二叉树的层序遍历
 */
 func levelOrder(root *TreeNode) [][]int {
@@ -34,7 +35,8 @@ func levelOrder(root *TreeNode) [][]int {
 	return res
 }
 
-/**
+/*
+*
 102. 二叉树的层序遍历：使用切片模拟队列，易理解
 迭代
 https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html
@@ -65,5 +67,33 @@ func levelOrderWithSlice(root *TreeNode) (res [][]int) {
 		curLevel = tempArr
 	}
 
+	return
+}
+
+func levelOrderCXBL(root *TreeNode) (resp [][]int) {
+	if root == nil {
+		return
+	}
+	var level []*TreeNode
+	level = append(level, root)
+
+	for len(level) > 0 {
+		n := len(level)
+		var tmp []int
+		for i := 0; i < n; i++ {
+			cur := level[0]
+			level = level[1:]
+
+			tmp = append(tmp, cur.Val)
+			if cur.Left != nil {
+				level = append(level, cur.Left)
+			}
+			if cur.Right != nil {
+				level = append(level, cur.Right)
+			}
+		}
+
+		resp = append(resp, tmp)
+	}
 	return
 }

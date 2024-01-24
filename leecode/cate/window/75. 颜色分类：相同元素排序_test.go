@@ -28,27 +28,6 @@ func sortColors(nums []int) {
 }
 
 // 双指针
-func sortColorsV2(nums []int) {
-	slow, fast := 0, 0
-	n := len(nums)
-	for fast < n {
-		if nums[fast] == 0 {
-			nums[fast], nums[slow] = nums[slow], nums[fast]
-			slow++
-		}
-		fast++
-	}
-	fast = slow
-	for fast < n {
-		if nums[fast] == 1 {
-			nums[fast], nums[slow] = nums[slow], nums[fast]
-			slow++
-		}
-		fast++
-	}
-}
-
-// 双指针
 func sortColorsV3(nums []int) {
 	n := len(nums)
 	c0, c2 := 0, n-1
@@ -61,6 +40,38 @@ func sortColorsV3(nums []int) {
 			c2--
 		} else {
 			i++
+		}
+	}
+}
+
+func sortColorsV2(nums []int) {
+	c0, c2 := 0, len(nums)-1
+	for i := 0; i <= c2; {
+		if nums[i] == 0 && i != c0 {
+			nums[i], nums[c0] = nums[c0], nums[i]
+			c0++
+		} else if nums[i] == 2 && i != c2 {
+			nums[i], nums[c2] = nums[c2], nums[i]
+			c2--
+		} else {
+			i++
+		}
+	}
+
+}
+
+func sortColorsV4(nums []int) {
+	var hash [3]int
+	for _, color := range nums {
+		hash[color]++
+	}
+
+	index := 0
+	for key, count := range hash {
+		for count > 0 {
+			nums[index] = key
+			index++
+			count--
 		}
 	}
 }

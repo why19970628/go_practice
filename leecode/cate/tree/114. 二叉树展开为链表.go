@@ -21,16 +21,16 @@ func flatten(root *TreeNode) {
 	root.Right = right
 }
 
-func flatten2(root *TreeNode) {
+func flatten3(root *TreeNode) {
 	if root == nil {
 		return
 	}
-	flatten2(root.Left)
-	flatten2(root.Right)
+	flatten3(root.Left)
+	flatten3(root.Right)
 	left, right := root.Left, root.Right
 	root.Left = nil
 	root.Right = left
-	if root.Right != nil {
+	for root.Right != nil {
 		root = root.Right
 	}
 	root.Right = right

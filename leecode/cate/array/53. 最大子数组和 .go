@@ -82,7 +82,31 @@ func maxSubArray(nums []int) int {
 	return result
 }
 
+func maxSubArrayV3(nums []int) int {
+	resp := -math.MaxInt32
+	sum := 0
+	for i := 0; i < len(nums); i++ {
+		sum += nums[i]
+		resp = max(resp, sum)
+		if sum < 0 {
+			sum = 0
+		}
+	}
+	return resp
+}
+
+func maxSubArrayDP(nums []int) int {
+	resp := nums[0]
+	dp := make([]int, 0, len(nums))
+	dp[0] = nums[0]
+	for i := 1; i < len(nums); i++ {
+		dp[i] = max(dp[i-1], nums[i]+dp[i-1])
+		resp = max(resp, dp[i])
+	}
+	return resp
+}
+
 func main() {
-	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-	fmt.Println(getMaxSum(nums))
+	nums := []int{4, -4, -1, 7, 8}
+	fmt.Println(maxSubArrayV3(nums))
 }

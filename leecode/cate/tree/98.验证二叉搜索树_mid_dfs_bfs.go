@@ -91,3 +91,18 @@ func isValidBSTV2(root *TreeNode) bool {
 	}
 	return true
 }
+
+func isValidV3(root *TreeNode) bool {
+	return isValidDFSV3(root, math.MaxInt64, math.MinInt64)
+}
+
+func isValidDFSV3(root *TreeNode, maxValue, minValue int) bool {
+	if root == nil {
+		return true
+	}
+	if root.Val >= maxValue || root.Val <= minValue {
+		return false
+	}
+
+	return isValidDFSV3(root.Left, root.Val, minValue) && isValidDFSV3(root.Right, maxValue, root.Val)
+}

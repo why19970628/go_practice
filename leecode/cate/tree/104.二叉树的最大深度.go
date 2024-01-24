@@ -61,3 +61,10 @@ func maxDepthDFS(root *TreeNode) (resp int) {
 	dfs(root, cur)
 	return
 }
+
+func maxDepthV2(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	return max(maxDepthV2(root.Left)+1, maxDepthV2(root.Right)+1)
+}

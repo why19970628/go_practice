@@ -86,6 +86,28 @@ func subsetsV2Dfs(nums []int, start int) {
 	return
 }
 
+func subsetsV3(nums []int) [][]int {
+	subsetsV2Resp = make([][]int, 0)
+	subsetsV2Temp = make([]int, 0)
+	subsetsV3Dfs(nums, 0)
+	subsetsV2Resp = append(subsetsV2Resp, []int{})
+	return subsetsV2Resp
+}
+
+func subsetsV3Dfs(nums []int, start int) {
+	if len(subsetsV2Temp) > 0 {
+		t := make([]int, len(subsetsV2Temp))
+		copy(t, subsetsV2Temp)
+		subsetsV2Resp = append(subsetsV2Resp, t)
+	}
+	for i := start; i < len(nums); i++ {
+		subsetsV2Temp = append(subsetsV2Temp, nums[i])
+		subsetsV3Dfs(nums, i+1)
+		subsetsV2Temp = subsetsV2Temp[:len(subsetsV2Temp)-1]
+	}
+	return
+}
+
 func TestSubsets(t *testing.T) {
 	fmt.Println(subsetsV2([]int{1, 2, 3}))
 }

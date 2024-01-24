@@ -19,6 +19,8 @@ var (
 )
 
 func partition(s string) [][]string {
+	res2 = make([][]string, 0)
+	strSlice = make([]string, 0)
 	partitionDfs(s, 0)
 	return res2
 }

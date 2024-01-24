@@ -128,10 +128,32 @@ func addTwoNumbersV3(l1 *ListNode, l2 *ListNode) *ListNode {
 	return dummyHead.Next
 }
 
+func addTwoNumbersV4(l1 *ListNode, l2 *ListNode) *ListNode {
+	dummyHead := &ListNode{}
+	cur := dummyHead
+	t := 0
+	for l1 != nil || l2 != nil || t != 0 {
+		if l1 != nil {
+			t += l1.Val
+			l1 = l1.Next
+		}
+		if l2 != nil {
+			t += l2.Val
+			l2 = l2.Next
+		}
+		cur.Next = &ListNode{
+			Val: t % 10,
+		}
+		cur = cur.Next
+		t = t / 10
+	}
+	return dummyHead.Next
+}
+
 func TestAddTwoNumbers(t *testing.T) {
 	// 创建一个链表: 1->2->3->4->5
-	head := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 2}}}
-	head2 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 2}}}
+	head := &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3}}}
+	head2 := &ListNode{Val: 5, Next: &ListNode{Val: 6, Next: &ListNode{Val: 4}}}
 
 	//head := &ListNode{Val: 0}
 	//head2 := &ListNode{Val: 0}
@@ -140,6 +162,6 @@ func TestAddTwoNumbers(t *testing.T) {
 	printList(head)
 	printList(head2)
 
-	newHead := addTwoNumbersV2(head, head2)
+	newHead := addTwoNumbersV4(head, head2)
 	printList(newHead)
 }

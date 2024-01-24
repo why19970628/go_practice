@@ -36,12 +36,12 @@ func permuteDfs(nums []int, cur int) {
 var (
 	resp46 [][]int
 	temp46 []int
-	mp2    = make(map[int]bool)
+	mp46   = make(map[int]bool)
 )
 
 func permuteV2(nums []int) [][]int {
 	resp46 = make([][]int, 0)
-	mp2 = make(map[int]bool, len(nums))
+	mp46 = make(map[int]bool, len(nums))
 	permuteV2DFS(nums, 0)
 	return resp46
 }
@@ -58,12 +58,37 @@ func permuteV2DFS(nums []int, start int) {
 		//	continue
 		//}
 
-		if val, ok := mp2[nums[i]]; !ok || val == false {
-			mp2[nums[i]] = true
+		if val, ok := mp46[nums[i]]; !ok || val == false {
+			mp46[nums[i]] = true
 			temp46 = append(temp46, nums[i])
 			permuteV2DFS(nums, i)
 			temp46 = temp46[:len(temp46)-1]
-			mp2[nums[i]] = false
+			mp46[nums[i]] = false
+		}
+	}
+}
+
+func permuteV3(nums []int) [][]int {
+	resp46 = make([][]int, 0)
+	temp46 = make([]int, 0)
+	mp46 = make(map[int]bool)
+	permuteV3DFS(nums)
+	return resp46
+}
+
+func permuteV3DFS(nums []int) {
+	if len(temp46) == len(nums) {
+		t := make([]int, len(nums))
+		copy(t, temp46)
+		resp46 = append(resp46, t)
+	}
+	for i := 0; i < len(nums); i++ {
+		if !mp46[nums[i]] {
+			mp46[nums[i]] = true
+			temp46 = append(temp46, nums[i])
+			permuteV3DFS(nums)
+			temp46 = temp46[:len(temp46)-1]
+			mp46[nums[i]] = false
 		}
 	}
 }

@@ -44,11 +44,24 @@ func dailyTemperatures(temperatures []int) []int {
 			resp[topIndex] = index - topIndex
 			stack = stack[:len(stack)-1]
 		}
-
 		stack = append(stack, index)
 	}
 
 	return resp
+}
+
+func dailyTemperaturesV2(temperatures []int) []int {
+	ans := make([]int, len(temperatures))
+	stack := []int{}
+	for i := 0; i < len(temperatures); i++ {
+		for len(stack) > 0 && temperatures[i] > temperatures[stack[len(stack)-1]] {
+			last := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			ans[last] = i - last
+		}
+		stack = append(stack, i)
+	}
+	return ans
 }
 
 func main() {

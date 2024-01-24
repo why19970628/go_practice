@@ -83,3 +83,45 @@ func twoSumV3(nums []int, start int, target int) [][]int {
 
 	return resp
 }
+
+func threeSumV4Solution(nums []int, start, target int) [][]int {
+	j := len(nums) - 1
+	resp := make([][]int, 0)
+
+	for i := start; i < len(nums); i++ {
+		if i > start && nums[i] == nums[i-1] {
+			continue
+		}
+		for i < j && nums[i]+nums[j] > target {
+			j--
+		}
+		if i < j && nums[i]+nums[j] == target {
+			resp = append(resp, []int{nums[i], nums[j]})
+		}
+
+	}
+	return resp
+}
+
+func threeSumV4(nums []int) [][]int {
+	sort.Ints(nums)
+	fmt.Println(nums)
+	resp := make([][]int, 0)
+	for i := 0; i < len(nums); i++ {
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+		fmt.Println(i, nums[i])
+		r := threeSumV4Solution(nums, i+1, 0-nums[i])
+		if len(r) > 0 {
+			for _, v := range r {
+				resp = append(resp, []int{nums[i], v[0], v[1]})
+			}
+		}
+	}
+	return resp
+}
+
+func main() {
+	fmt.Println(threeSumV4([]int{-1, 0, 1, 2, -1, -4, -4, 8}))
+}
