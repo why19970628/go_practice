@@ -1,6 +1,9 @@
 package redis
 
-import "time"
+import (
+	"github.com/go-kratos/aegis/topk"
+	"time"
+)
 
 // openTopK 热点检测
 func (r *Redis) openTopK() bool {
@@ -13,9 +16,12 @@ func (r *Redis) openLocalCache() bool {
 }
 
 func (r *Redis) getFromLocalCache(key string) (interface{}, bool) {
-	if r.localCache != nil {
-		resp, err := r.localCache.Get(key)
-		if err != nil || resp == nil {
+	if r.openLocalCache() {
+		resp, _ := r.localCache.Get(key)
+		if resp == nil {
+			if val, ok := r.inWhileList(key); ok {
+				return val, ok
+			}
 			return nil, false
 		}
 		return resp, true
@@ -32,7 +38,7 @@ func (r *Redis) updateLocalCache(key string, resp interface{}, expiration time.D
 			}
 		}
 
-		if r.inWhileList(key) {
+		if _, ok := r.inWhileList(key); ok {
 			_ = r.localCache.SetWithExpire(key, resp, expiration)
 			return
 		}
@@ -40,11 +46,15 @@ func (r *Redis) updateLocalCache(key string, resp interface{}, expiration time.D
 }
 
 // inWhileList 白名单
-func (r *Redis) inWhileList(key string) bool {
+func (r *Redis) inWhileList(key string) (interface{}, bool) {
 	if r.whiteList != nil {
-		if _, ok := r.whiteList[key]; ok {
-			return true
+		if val, ok := r.whiteList[key]; ok {
+			return val, true
 		}
 	}
-	return false
+	return nil, false
+}
+
+func (r *Redis) GetTopKey() []topk.Item {
+	return r.topK.List()
 }

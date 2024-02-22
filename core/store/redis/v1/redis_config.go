@@ -21,11 +21,11 @@ const (
 )
 
 type RedisConfig struct {
-	Host          string        `yaml:"host" json:"host"`
-	Port          int           `yaml:"port" json:"port"`
-	Password      string        `yaml:"password" json:"password"`
-	DB            int           `yaml:"db" json:"db"`
-	KeyPrefix     string        `yaml:"key_prefix" json:"key_prefix"`
+	Host     string `yaml:"host" json:"host"`
+	Port     int    `yaml:"port" json:"port"`
+	Password string `yaml:"password" json:"password"`
+	DB       int    `yaml:"db" json:"db"`
+	//KeyPrefix     string        `yaml:"key_prefix" json:"key_prefix"`
 	MinIdleConns  int           `yaml:"min_idle_conns" json:"min_idle_conns"` // 最少空闲连接数
 	PoolSize      int           `yaml:"pool_size" json:"pool_size"`           // 连接池上线
 	IdleTimeout   time.Duration `yaml:"idle_timeout" json:"idle_timeout"`     // 一个连接多久未被连接认为该连接是空闲连接 单位：秒

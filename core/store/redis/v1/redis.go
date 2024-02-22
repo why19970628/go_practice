@@ -23,7 +23,7 @@ type (
 		Client        *redis.Client
 		topK          topk.Topk
 		localCache    gcache.Cache
-		whiteList     map[string]struct{}
+		whiteList     map[string]interface{}
 		localCacheTTL time.Duration
 	}
 )
@@ -89,7 +89,7 @@ func WithFirstLevelCache(cache gcache.Cache) RedisOption {
 }
 
 // WithWhiteList 设置白名单选项
-func WithWhiteList(whiteList map[string]struct{}) RedisOption {
+func WithWhiteList(whiteList map[string]interface{}) RedisOption {
 	return func(r *Redis) error {
 		r.whiteList = whiteList
 		return nil

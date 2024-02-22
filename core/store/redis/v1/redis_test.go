@@ -14,14 +14,14 @@ var (
 func initNewRedis() error {
 	var err error
 	rds, err = NewRedis(RedisConfig{
-		Host:      "127.0.0.2:999",
-		Port:      0,
-		Password:  "",
-		KeyPrefix: "test",
+		Host:     "r-2zemnsr8cmr6trxnt6.redis.rds.aliyuncs.com",
+		Port:     6379,
+		Password: "qRf^Zzc3sBVzZcz2",
+		//KeyPrefix: "test",
 	},
 		WithTopK(topk.NewHeavyKeeper(10, 10000, 5, 0.925, 0)),
 		WithFirstLevelCache(gcache.New(100).LRU().Build()),
-		WithWhiteList(map[string]struct{}{"123": {}}),
+		WithWhiteList(map[string]interface{}{"test_white_key": "test_white_value"}),
 	)
 
 	return err

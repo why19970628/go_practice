@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"errors"
+	"fmt"
 	"time"
 )
 
@@ -29,8 +30,10 @@ func (r *Redis) Get(ctx context.Context, key string) (res interface{}, err error
 	if r.openLocalCache() {
 		resp, ok := r.getFromLocalCache(key)
 		if ok {
+			fmt.Println("hit local cache", key)
 			return resp, nil
 		}
+
 	}
 	res, err = r.Client.Get(ctx, key).Result()
 	r.updateLocalCache(key, res, r.localCacheTTL)
