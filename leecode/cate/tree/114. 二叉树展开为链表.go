@@ -1,8 +1,10 @@
 package main
 
 /*
+https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/
 
- */
+
+*/
 
 // 后序展开为右链表
 func flatten(root *TreeNode) {

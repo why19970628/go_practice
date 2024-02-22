@@ -39,7 +39,7 @@ func getMaxSum(arr []int) int {
 	return maxSum
 }
 
-func maxSubArrayV2(nums []int) int {
+func maxSubArray(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
 	}
@@ -64,37 +64,6 @@ func max(a, b int) int {
 	}
 }
 
-func maxSubArray(nums []int) int {
-	if len(nums) == 1 {
-		return nums[0]
-	}
-	result := -math.MaxInt32
-	var count = 0
-	for i := 0; i < len(nums); i++ {
-		count += nums[i]
-		if count > result {
-			result = count
-		}
-		if count < 0 {
-			count = 0
-		}
-	}
-	return result
-}
-
-func maxSubArrayV3(nums []int) int {
-	resp := -math.MaxInt32
-	sum := 0
-	for i := 0; i < len(nums); i++ {
-		sum += nums[i]
-		resp = max(resp, sum)
-		if sum < 0 {
-			sum = 0
-		}
-	}
-	return resp
-}
-
 func maxSubArrayDP(nums []int) int {
 	resp := nums[0]
 	dp := make([]int, 0, len(nums))
@@ -108,5 +77,5 @@ func maxSubArrayDP(nums []int) int {
 
 func main() {
 	nums := []int{4, -4, -1, 7, 8}
-	fmt.Println(maxSubArrayV3(nums))
+	fmt.Println(maxSubArray(nums))
 }
