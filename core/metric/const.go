@@ -1,0 +1,3 @@
+package metric
+
+const DefaultNamespace = ""

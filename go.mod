@@ -18,7 +18,6 @@ require (
 	github.com/go-redsync/redsync v1.4.2
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/gogap/errors v0.0.0-20210701081805-48fc6910ea07
-	github.com/gogf/gf v1.16.9
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/protobuf v1.5.3
 	github.com/gomodule/redigo v2.0.0+incompatible
@@ -31,9 +30,11 @@ require (
 	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/olivere/elastic v6.2.35+incompatible
 	github.com/opentracing/opentracing-go v1.2.0
+	github.com/prometheus/client_golang v1.16.0
 	github.com/robfig/cron v1.2.0
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.6.0
+	github.com/spf13/cast v1.6.0
 	github.com/spf13/cobra v1.7.0
 	github.com/starwander/GoFibonacciHeap v0.0.0-20190508061137-ba2e4f01000a
 	github.com/stretchr/testify v1.8.4
@@ -101,7 +102,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/power-devops/perfstat v0.0.0-20221212215047-62379fc7944b // indirect
-	github.com/prometheus/client_golang v1.16.0 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.42.0 // indirect
 	github.com/prometheus/procfs v0.10.1 // indirect

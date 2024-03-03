@@ -46,11 +46,60 @@ func f1(a []int) {
 	a = append(a, 30)
 	fmt.Println("2:", a)
 }
+
+/*
+解释：
+
+首先，打印出 a1: [4 5 6]，这是 fn1 函数中的第一个打印语句，显示了切片 a1 的值为 [4 5 6]，这个值是从 nums 中索引为3（包括）到末尾的元素构成的。
+
+然后，打印出 a2: [4 5 7]，这是 fn1 函数中的第二个打印语句，显示了修改后的切片 a1 的值为 [4 5 7]，其中索引为2的元素被修改为了7。
+
+最后，打印出 fn1 after nums: [1 2 3 4 5 7]，这是 sliceQuestion 函数中的打印语句
+，显示了函数调用后原始的 nums 切片被修改了，即索引为5的位置上的元素由原来的6被修改为了7。
+这是因为在Go语言中，切片是引用类型，传递给函数的是其底层数组的引用，因此在函数内部修改切片会影响到原始切片。
+
+*/
+
+func sliceQuestion() {
+	nums1 := []int{1, 2, 3, 4, 5, 6}
+	fn1(nums1)
+	fmt.Println("fn1 after nums: ", nums1) // 1 2 3 4 5 7
+
+	nums2 := []int{1, 2, 3, 4, 5, 6}
+	fn2(nums2)
+	fmt.Println("fn2 after nums: ", nums2) // 1 2 3 4 5 7
+
+	nums3 := []int{1, 2, 3, 4, 5, 6}
+	fn_append(nums3)
+	fmt.Println("fn_append after nums: ", nums3) // 1 2 3 4 5 6
+}
+func fn1(nums []int) {
+	a1 := nums[3:] // 4 5 6
+	fmt.Println("a1:", a1)
+	a1[2] = 7 // 4 5 7
+	fmt.Println("a2:", a1)
+}
+
+func fn2(nums []int) {
+	nums = nums[3:] // 4 5 6
+	fmt.Println("a3:", nums)
+	nums[2] = 7 // 4 5 7
+	fmt.Println("a4:", nums)
+}
+
+func fn_append(nums []int) {
+	nums = nums[3:]
+	fmt.Printf("a5: %vlen:%v,cap:%v \n", nums, len(nums), cap(nums)) // [4 5 6] len:3,cap:3
+	nums[2] = 7                                                      // 4 5 7
+	nums = append(nums, 7)                                           // [4 5 7 7]，发生扩容
+}
+
 func main() {
-	a := make([]int, 2)
-	a[0] = 10
-	a[1] = 20
-	fmt.Println("1:", a)
-	f1(a)
-	fmt.Println(a)
+	sliceQuestion()
+	//a := make([]int, 2)
+	//a[0] = 10
+	//a[1] = 20
+	//fmt.Println("1:", a)
+	//f1(a)
+	//fmt.Println(a)
 }

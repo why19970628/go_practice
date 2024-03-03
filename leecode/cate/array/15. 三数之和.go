@@ -50,78 +50,49 @@ func twoSumV2(numbers []int, start int, target int) [][]int {
 }
 
 func threeSumV3(nums []int) [][]int {
-	sort.Ints(nums)
+
 	resp := make([][]int, 0)
+	// 排序
+	sort.Slice(nums, func(i, j int) bool {
+		return nums[i] < nums[j]
+	})
+
+	mp := make(map[int]bool)
+	// -4,-1,-1, 0,1,2
 	for i := 0; i < len(nums); i++ {
+		// 未去重
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
-		r := twoSumV3(nums, i+1, 0-nums[i])
-		if len(r) > 0 {
-			for _, v := range r {
-				resp = append(resp, []int{nums[i], v[0], v[1]})
+
+		mp[nums[i]] = true
+		ans := twoSumV3(nums, i+1, 0-nums[i])
+		if len(ans) > 0 {
+			for _, an := range ans {
+				resp = append(resp, []int{nums[i], nums[an[0]], nums[an[1]]})
 			}
 		}
 	}
 	return resp
 }
 
-func twoSumV3(nums []int, start int, target int) [][]int {
-	j := len(nums) - 1
-	resp := make([][]int, 0)
+// -4,-1,-1, 0,1,2
+func twoSumV3(nums []int, start, target int) [][]int {
+	ans := make([][]int, 0)
 	for i := start; i < len(nums); i++ {
-		if i > start && nums[i] == nums[i-1] {
-			continue
-		}
-		for i < j && nums[i]+nums[j] > target {
-			j--
-		}
-		if i < j && nums[i]+nums[j] == target {
-			resp = append(resp, []int{nums[i], nums[j]})
-		}
-	}
-
-	return resp
-}
-
-func threeSumV4Solution(nums []int, start, target int) [][]int {
-	j := len(nums) - 1
-	resp := make([][]int, 0)
-
-	for i := start; i < len(nums); i++ {
-		if i > start && nums[i] == nums[i-1] {
-			continue
-		}
-		for i < j && nums[i]+nums[j] > target {
-			j--
-		}
-		if i < j && nums[i]+nums[j] == target {
-			resp = append(resp, []int{nums[i], nums[j]})
-		}
-
-	}
-	return resp
-}
-
-func threeSumV4(nums []int) [][]int {
-	sort.Ints(nums)
-	fmt.Println(nums)
-	resp := make([][]int, 0)
-	for i := 0; i < len(nums); i++ {
-		if i > 0 && nums[i] == nums[i-1] {
-			continue
-		}
-		fmt.Println(i, nums[i])
-		r := threeSumV4Solution(nums, i+1, 0-nums[i])
-		if len(r) > 0 {
-			for _, v := range r {
-				resp = append(resp, []int{nums[i], v[0], v[1]})
+		for j := i + 1; j < len(nums); j++ {
+			// 去重
+			if nums[start] == nums[j] {
+				continue
+			}
+			if nums[i]+nums[j] == target {
+				ans = append(ans, []int{i, j})
 			}
 		}
 	}
-	return resp
+	return ans
 }
 
 func main() {
-	fmt.Println(threeSumV4([]int{-1, 0, 1, 2, -1, -4, -4, 8}))
+	fmt.Println(threeSum([]int{-1, 0, 1, 2, -1, -4, -4, 8}))
 }

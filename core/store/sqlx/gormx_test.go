@@ -29,9 +29,8 @@ func TestAddStressSuffixTest(t *testing.T) {
 
 	// 在需要进行压测的地方，设置压测标识
 	st := NewStressTest(
-		WithTableSuffix("_stress_v2"),
-		WithStressKey("P_STRESS"),
-		WithStressVal("true"),
+		WithTableSuffix("_stress"),
+		WithStressKey("Go_STRESS"),
 	)
 	ctx := st.SetStressContext(context.Background())
 

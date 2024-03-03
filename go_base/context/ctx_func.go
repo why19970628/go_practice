@@ -36,7 +36,7 @@ func AsyncCall(ctx context.Context, t time.Duration, f func() error) error {
 func main() {
 	err := AsyncCall(context.Background(),
 		time.Millisecond*50, func() error {
-			time.Sleep(time.Millisecond * 10)
+			time.Sleep(time.Millisecond * 100)
 			return nil
 		})
 	if err != nil {

@@ -17,7 +17,7 @@ func test_2_wei_bag_problem1(weight, value []int, bagweight int) int {
 	for j := bagweight; j >= weight[0]; j-- {
 		dp[0][j] = dp[0][j-weight[0]] + value[0]
 	}
-	fmt.Println(dp)
+	fmt.Println("init dp", dp)
 	// 递推公式
 	for i := 1; i < len(weight); i++ {
 		//正序,也可以倒序
@@ -32,6 +32,32 @@ func test_2_wei_bag_problem1(weight, value []int, bagweight int) int {
 	return dp[len(weight)-1][bagweight]
 }
 
+func test_2_wei_bag_problem2(weight, value []int, bagweight int) int {
+	dp := make([][]int, len(weight))
+	for i := 0; i < len(weight); i++ {
+		dp[i] = make([]int, bagweight+1)
+	}
+	// 初始化价值
+	for j := bagweight; j > 0; j-- {
+		dp[0][j] = dp[0][j-weight[0]] + value[0]
+	}
+
+	for i := 1; i < len(weight); i++ {
+		for j := 0; j <= bagweight; j++ {
+			// 背包重量小于物品重量
+			if j < weight[i] {
+				dp[i][j] = dp[i-1][j]
+			} else {
+				dp[i][j] = max1(dp[i-1][j], dp[i-1][j-weight[i]]+value[0])
+			}
+		}
+	}
+
+	fmt.Println(dp)
+	return dp[len(weight)-1][bagweight]
+
+}
+
 func max1(a, b int) int {
 	if a > b {
 		return a
@@ -42,5 +68,5 @@ func max1(a, b int) int {
 func main() {
 	weight := []int{1, 3, 4}
 	value := []int{15, 20, 30}
-	fmt.Println(test_2_wei_bag_problem1(weight, value, 4))
+	fmt.Println(test_2_wei_bag_problem2(weight, value, 4))
 }
