@@ -1,4 +1,4 @@
-package window
+package main
 
 /*
 https://leetcode.cn/problems/sort-colors/

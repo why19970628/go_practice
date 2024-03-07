@@ -1,4 +1,4 @@
-package binary_search
+package main
 
 /*
 https://leetcode.cn/problems/koko-eating-bananas/

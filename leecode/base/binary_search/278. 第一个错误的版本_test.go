@@ -1,4 +1,4 @@
-package binary_search
+package main
 
 /*
 // 278. 第一个错误的版本

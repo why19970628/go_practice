@@ -1,4 +1,4 @@
-package binary_search
+package main
 
 func guessNumber(n int) int {
 	left, right := 0, n

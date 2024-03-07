@@ -1,4 +1,4 @@
-package binary_search
+package main
 
 func findPeakElement(nums []int) int {
 	maxIndex := 0

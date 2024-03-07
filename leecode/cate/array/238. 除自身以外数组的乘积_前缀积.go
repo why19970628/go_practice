@@ -24,7 +24,7 @@ https://leetcode.cn/problems/product-of-array-except-self/description/?envType=s
 
 // 前缀积： 维护ans[i]: 为左侧所有元素之积 * 右侧所有元素之积
 func productExceptSelf(nums []int) []int {
-	resp := make([]int, 0)
+	resp := make([]int, len(nums))
 	resp[0] = 1
 	for i := 1; i < len(nums); i++ {
 		resp[i] = resp[i-1] * nums[i-1]
