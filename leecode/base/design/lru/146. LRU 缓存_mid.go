@@ -11,7 +11,6 @@ void put(int key, int value) 如果关键字 key 已经存在，则变更其数�
 */
 
 // 双向链表、HASH表
-
 type Node struct {
 	key  int
 	val  int
