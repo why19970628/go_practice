@@ -100,6 +100,70 @@ func oddEvenListV2(head *ListNode) *ListNode {
 	}
 }
 
+func oddEvenListV3(head *ListNode) *ListNode {
+	if head == nil {
+		return head
+	}
+	dummyHead1 := &ListNode{
+		Val: -1,
+	}
+	dummyHead2 := &ListNode{
+		Val: -1,
+	}
+
+	cur1 := dummyHead1
+	cur2 := dummyHead2
+
+	cur := head
+	index := 1
+	for cur != nil {
+		// 偶数
+		if index%2 == 0 {
+			next := cur.Next
+			cur2.Next = cur
+			cur2 = cur2.Next
+			cur2.Next = nil
+
+			cur = next
+
+		} else {
+			// 奇数
+			next := cur.Next
+			cur1.Next = cur
+			cur1 = cur1.Next
+			cur1.Next = nil
+			cur = next
+		}
+
+		index++
+	}
+
+	for cur != nil {
+		// 偶数
+		if index%2 == 1 {
+			next := cur.Next
+			cur2.Next = cur
+			cur2 = cur2.Next
+			cur2.Next = nil
+			cur = next
+		} else {
+			next := cur.Next
+			cur1.Next = cur
+			cur1 = cur1.Next
+			cur1.Next = nil
+			cur = next
+		}
+		index++
+	}
+	if dummyHead2.Next == nil {
+		return dummyHead1.Next
+	} else {
+		cur1.Next = dummyHead2.Next
+		return dummyHead1.Next
+	}
+
+}
+
 func TestOddEvenList(t *testing.T) {
 	// 创建一个链表: 1->2->3->4->5
 	head := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
@@ -107,6 +171,6 @@ func TestOddEvenList(t *testing.T) {
 	fmt.Println("Original List:")
 	printList(head)
 
-	newHead := oddEvenListV2(head)
+	newHead := oddEvenListV3(head)
 	printList(newHead)
 }

@@ -54,6 +54,7 @@ func partition2(nums []int, l, r int) int {
 	return i
 }
 
+// 堆排序 小顶堆
 type iheap []int
 
 func (h iheap) Len() int {
