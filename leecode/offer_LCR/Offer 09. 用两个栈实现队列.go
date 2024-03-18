@@ -52,3 +52,26 @@ func (this *CQueue) DeleteHead() int {
 func main() {
 	fmt.Println("123")
 }
+
+type stack struct {
+	arr1 []int
+	arr2 []int
+}
+
+func (s *stack) push(val int) {
+	s.arr1 = append(s.arr1, val)
+}
+
+func (s *stack) pop() int {
+	if len(s.arr2) == 0 {
+		for i := len(s.arr1) - 1; i >= 0; i++ {
+			s.arr2 = append(s.arr2, s.arr1[i])
+		}
+	}
+	if len(s.arr2) > 0 {
+		val := s.arr2[len(s.arr2)-1]
+		s.arr2 = s.arr2[:len(s.arr2)-1]
+		return val
+	}
+	return -1
+}
