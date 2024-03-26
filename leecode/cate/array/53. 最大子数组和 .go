@@ -66,13 +66,14 @@ func max(a, b int) int {
 
 func maxSubArrayDP(nums []int) int {
 	resp := nums[0]
-	dp := make([]int, 0, len(nums))
+	dp := make([]int, len(nums))
 	dp[0] = nums[0]
 	for i := 1; i < len(nums); i++ {
-		dp[i] = max(dp[i-1], nums[i]+dp[i-1])
-		resp = max(resp, dp[i])
+		dp[i] = max(nums[i], dp[i-1]+nums[i])
+		resp = max(dp[i], resp)
 	}
 	return resp
+
 }
 
 func main() {
