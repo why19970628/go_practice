@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func addStrings(num1 string, num2 string) string {
+func addStrings1(num1 string, num2 string) string {
 	n1 := len(num1) - 1
 	n2 := len(num2) - 1
 	t := 0
